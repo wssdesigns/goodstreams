@@ -1,7 +1,7 @@
 {
-  "name": "devconnector",
+  "name": "goodstreams",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "Find high quality movies and shows to stream",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",

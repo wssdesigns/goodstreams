@@ -37,3 +37,27 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+#footer {
+  background-color: black;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  color: grey;
+}
+
+#main-navbar {
+  background-color: red;
+}
+
+#good-navbar {
+  font-weight: bolder;
+  color: white;
+}
+
+#streams-navbar {
+  font-weight: lighter;
+  color: white;
+}
