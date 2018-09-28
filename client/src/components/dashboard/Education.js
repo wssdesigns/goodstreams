@@ -15,17 +15,17 @@ class Education extends Component {
         <td>{edu.school}</td>
         <td>{edu.degree}</td>
         <td>
-          <Moment format="YYYY/MM/DD">{edu.from}</Moment> -
+          <Moment format="MM/DD/YYYY">{edu.from}</Moment> - 
           {edu.to === null ? (
             ' Now'
           ) : (
-            <Moment format="YYYY/MM/DD">{edu.to}</Moment>
+            <Moment format="MM/DD/YYYY"> {edu.to}</Moment>
           )}
         </td>
         <td>
           <button
             onClick={this.onDeleteClick.bind(this, edu._id)}
-            className="btn btn-danger"
+            className="btn btn-danger btn-sm"
           >
             Delete
           </button>
