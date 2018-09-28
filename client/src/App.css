@@ -2,9 +2,15 @@ img {
   width: 100%;
 }
 
+body {
+  background-color: #191818;
+  color: white;
+}
+
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
+  background-color:black;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -39,13 +45,14 @@ img {
 }
 
 #footer {
-  background-color: black;
-  height: 100px;
+  background-color: #191818;
+  height: 300px;
   position: relative;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 100px;
   padding-top: 20px;
   color: grey;
+  border-top: 0.5px solid grey;
 }
 
 #main-navbar {
@@ -60,4 +67,21 @@ img {
 #streams-navbar {
   font-weight: lighter;
   color: white;
+}
+
+#forum-body-text {
+  color: black;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+#forum-posted-by-text {
+  font-size: 0.8rem;
+  color: grey;
+  margin-top:0;
+  margin-bottom:15px;
+}
+
+p.lead {
+  color: black;
 }

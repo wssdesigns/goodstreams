@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import Moment from 'react-moment';
 
 class PostItem extends Component {
+
   onDeleteClick(id) {
     this.props.deletePost(id);
   }
@@ -30,22 +32,18 @@ class PostItem extends Component {
   render() {
     const { post, auth, showActions } = this.props;
 
+    const firstName = post.name.trim().split(' ')[0];
+
     return (
-      <div className="card card-body mb-3">
+      <div className="card card-body mb-1">
         <div className="row">
-          <div className="col-md-2">
-            <a href="profile.html">
-              <img
-                className="rounded-circle d-none d-md-block"
-                src={post.avatar}
-                alt=""
-              />
-            </a>
+          <div className="col-md-12">
+            <p id="forum-body-text">{post.text}</p>
             <br />
-            <p className="text-center">{post.name}</p>
-          </div>
-          <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+            <hr></hr>
+            <p className="text-left" id="forum-posted-by-text">
+              by {firstName} {<Moment fromNow ago>{post.date}</Moment>} ago
+            </p>
             {showActions ? (
               <span>
                 <button
@@ -67,16 +65,16 @@ class PostItem extends Component {
                 >
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
-                <Link to={`/post/${post._id}`} className="btn btn-success mr-1">
-                  Comments
+                <Link to={`/post/${post._id}`} className="btn btn-sm btn-outline-dark ml-2 mr-1">
+                  Reply
                 </Link>
                 {post.user === auth.user.id ? (
                   <button
                     onClick={this.onDeleteClick.bind(this, post._id)}
                     type="button"
-                    className="btn btn-danger mr-1"
+                    className="btn btn-outline-danger btn-sm ml-2 mr-2"
                   >
-                    <i className="fas fa-times" />
+                    Remove
                   </button>
                 ) : null}
               </span>

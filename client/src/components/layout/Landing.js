@@ -17,10 +17,10 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-5 mb-4">Higher-quality movies and shows</h1>
+                <h1 className="display-5 mb-4">Discover high-quality movies and shows</h1>
                 <p className="lead">
                   {' '}
-                  Less time researching what to watch
+                  Spend less time researching what to watch
                 </p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-success mr-2">

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import logo from '../../img/logo-white-100px.png';
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -18,13 +19,26 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/feed">
-            Post Feed
+          <Link className="nav-link" to="/discover">
+            Discover
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/feed">
+            Forums
+          </Link>
+        </li>
+        <li className="nav-item">
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
-            Dashboard
+          <img
+              className="rounded-circle"
+              src={user.avatar}
+              alt={user.name}
+              style={{ width: '30px', marginRight: '3px' }}
+              title="You must have a Gravatar connected to your email to display an image"
+            />
           </Link>
         </li>
         <li className="nav-item">
@@ -33,13 +47,6 @@ class Navbar extends Component {
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
-            <img
-              className="rounded-circle"
-              src={user.avatar}
-              alt={user.name}
-              style={{ width: '25px', marginRight: '5px' }}
-              title="You must have a Gravatar connected to your email to display an image"
-            />{' '}
             Logout
           </a>
         </li>
@@ -65,6 +72,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
+            <img src={logo} style={{height: '30px', width: '30px', marginRight: '6px'}} alt="goodstreams logo"></img>
             <span id="good-navbar">Good</span><span id="streams-navbar">Streams</span>
           </Link>
           <button
