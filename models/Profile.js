@@ -37,59 +37,45 @@ const ProfileSchema = new Schema({
   },
   experience: [
     {
-      title: {
+      listName: {
         type: String,
         required: true
-      },
-      company: {
-        type: String,
-        required: true
-      },
-      location: {
-        type: String
-      },
-      from: {
-        type: Date,
-        required: true
-      },
-      to: {
-        type: Date
-      },
-      current: {
-        type: Boolean,
-        default: false
       },
       description: {
+        type: String,
+        required: true
+      },
+      videoOne: {
         type: String
-      }
-    }
-  ],
-  education: [
-    {
-      school: {
-        type: String,
-        required: true
       },
-      degree: {
-        type: String,
-        required: true
+      videoTwo: {
+        type: String
       },
-      fieldofstudy: {
-        type: String,
-        required: true
+      videoThree: {
+        type: String
       },
-      from: {
-        type: Date,
-        required: true
+      videoFour: {
+        type: String
       },
-      to: {
-        type: Date
+      videoFive: {
+        type: String
       },
-      current: {
-        type: Boolean,
-        default: false
+      videoSix: {
+        type: String
       },
-      description: {
+      videoSeven: {
+        type: String
+      },
+      videoEight: {
+        type: String
+      },
+      videoNine: {
+        type: String
+      },
+      videoTen: {
+        type: String
+      },
+      lastChange: {
         type: String
       }
     }

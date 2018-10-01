@@ -6,7 +6,6 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
 import Experience from './Experience';
-import Education from './Education';
 import { Button } from 'reactstrap';
 
 class Dashboard extends Component {

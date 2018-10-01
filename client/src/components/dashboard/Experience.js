@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment';
 import { deleteExperience } from '../../actions/profileActions';
+import Moment from 'react-moment';
 
 class Experience extends Component {
   onDeleteClick(id) {
@@ -11,17 +11,11 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
+
       <tr key={exp._id}>
-        <td>{exp.company}</td>
-        <td>{exp.title}</td>
-        <td>
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
-          {exp.to === null ? (
-            ' Now'
-          ) : (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
-          )}
-        </td>
+        <td>{exp.listName}</td>
+        <td>Category</td>
+        <td><Moment fromNow>{exp.lastChange}</Moment></td>
         <td>
           <button
             onClick={this.onDeleteClick.bind(this, exp._id)}
@@ -40,7 +34,7 @@ class Experience extends Component {
             <tr>
               <th>Name</th>
               <th>Category</th>
-              <th>Created</th>
+              <th>Updated</th>
               <th />
             </tr>
             {experience}

@@ -10,20 +10,24 @@ class AddExperience extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      company: '',
-      title: '',
-      location: '',
-      from: '',
-      to: '',
-      current: false,
+      listName: '',
       description: '',
-      errors: {},
-      disabled: false
+      videoOne: '',
+      videoTwo: '',
+      videoThree: '',
+      videoFour: '',
+      videoFive: '',
+      videoSix: '',
+      videoSeven: '',
+      videoEight: '',
+      videoNine: '',
+      videoTen: '',
+      lastChange: '1234',
+      errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onCheck = this.onCheck.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -36,13 +40,19 @@ class AddExperience extends Component {
     e.preventDefault();
 
     const expData = {
-      company: this.state.company,
-      title: this.state.title,
-      location: this.state.location,
-      from: this.state.from,
-      to: this.state.to,
-      current: this.state.current,
-      description: this.state.description
+      listName: this.state.listName,
+      description: this.state.description,
+      videoOne: this.state.videoOne,
+      videoTwo: this.state.videoTwo,
+      videoThree: this.state.videoThree,
+      videoFour: this.state.videoFour,
+      videoFive: this.state.videoFive,
+      videoSix: this.state.videoSix,
+      videoSeven: this.state.videoSeven,
+      videoEight: this.state.videoEight,
+      videoNine: this.state.videoNine,
+      videoTen: this.state.videoTen,
+      lastChange: new Date()
     };
 
     this.props.addExperience(expData, this.props.history);
@@ -50,13 +60,6 @@ class AddExperience extends Component {
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-  }
-
-  onCheck(e) {
-    this.setState({
-      disabled: !this.state.disabled,
-      current: !this.state.current
-    });
   }
 
   render() {
@@ -70,71 +73,105 @@ class AddExperience extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Add Experience</h1>
+              <h1 className="display-4 text-center">Create List</h1>
               <p className="lead text-center">
-                Add any job or position that you have had in the past or current
+                Include movies or shows you plan to stream
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Company"
-                  name="company"
-                  value={this.state.company}
+                  placeholder="* List Name"
+                  name="listName"
+                  value={this.state.listName}
                   onChange={this.onChange}
-                  error={errors.company}
+                  error={errors.listName}
                 />
-                <TextFieldGroup
-                  placeholder="* Job Title"
-                  name="title"
-                  value={this.state.title}
-                  onChange={this.onChange}
-                  error={errors.title}
-                />
-                <TextFieldGroup
-                  placeholder="Location"
-                  name="location"
-                  value={this.state.location}
-                  onChange={this.onChange}
-                  error={errors.location}
-                />
-                <h6>From Date</h6>
-                <TextFieldGroup
-                  name="from"
-                  type="date"
-                  value={this.state.from}
-                  onChange={this.onChange}
-                  error={errors.from}
-                />
-                <h6>To Date</h6>
-                <TextFieldGroup
-                  name="to"
-                  type="date"
-                  value={this.state.to}
-                  onChange={this.onChange}
-                  error={errors.to}
-                  disabled={this.state.disabled ? 'disabled' : ''}
-                />
-                <div className="form-check mb-4">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name="current"
-                    value={this.state.current}
-                    checked={this.state.current}
-                    onChange={this.onCheck}
-                    id="current"
-                  />
-                  <label htmlFor="current" className="form-check-label">
-                    Current Job
-                  </label>
-                </div>
                 <TextAreaFieldGroup
-                  placeholder="Job Description"
+                  placeholder="* Description"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the the position"
+                />
+                <div className="d-block pb-3">Title #1</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoOne"
+                  value={this.state.videoOne}
+                  onChange={this.onChange}
+                  error={errors.videoOne}
+                />
+                <div className="d-block pb-3">Title #2</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoTwo"
+                  value={this.state.videoTwo}
+                  onChange={this.onChange}
+                  error={errors.videoTwo}
+                />
+                <div className="d-block pb-3">Title #3</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoThree"
+                  value={this.state.videoThree}
+                  onChange={this.onChange}
+                  error={errors.videoThree}
+                />
+                <div className="d-block pb-3">Title #4</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoFour"
+                  value={this.state.videoFour}
+                  onChange={this.onChange}
+                  error={errors.videoFour}
+                />
+                <div className="d-block pb-3">Title #5</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoFive"
+                  value={this.state.videoFive}
+                  onChange={this.onChange}
+                  error={errors.videoFive}
+                />
+                <div className="d-block pb-3">Title #6</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoSix"
+                  value={this.state.videoSix}
+                  onChange={this.onChange}
+                  error={errors.videoSix}
+                />
+                <div className="d-block pb-3">Title #7</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoSeven"
+                  value={this.state.videoSeven}
+                  onChange={this.onChange}
+                  error={errors.videoSeven}
+                />
+                <div className="d-block pb-3">Title #8</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoEight"
+                  value={this.state.videoEight}
+                  onChange={this.onChange}
+                  error={errors.videoEight}
+                />
+                <div className="d-block pb-3">Title #9</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoNine"
+                  value={this.state.videoNine}
+                  onChange={this.onChange}
+                  error={errors.videoNine}
+                />
+                <div className="d-block pb-3">Title #10</div>
+                <TextFieldGroup
+                  placeholder="Movie or show name"
+                  name="videoTen"
+                  value={this.state.videoTen}
+                  onChange={this.onChange}
+                  error={errors.videoTen}
                 />
                 <input
                   type="submit"
