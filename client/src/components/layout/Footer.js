@@ -16,9 +16,10 @@ export default () => {
             <CardTitle style={{ color: 'grey'}}>COMMUNITY</CardTitle>
             <CardText>
               <ul style={{ color: 'grey', fontSize: '0.9rem'}} className="list-unstyled">
+                <li>People</li>
                 <li>Movies</li>
                 <li>Shows</li>
-                <li>Forums</li>
+                <li>Forum</li>
               </ul>
             </CardText>
           </Card>

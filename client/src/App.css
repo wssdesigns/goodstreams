@@ -89,3 +89,7 @@ p.lead {
 #welcome-name:any-link {
   color: white;
 }
+
+#forum-header {
+  margin-bottom: 1.7rem;
+}
