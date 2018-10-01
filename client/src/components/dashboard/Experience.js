@@ -38,7 +38,7 @@ class Experience extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>List Name</th>
+              <th>Name</th>
               <th>Category</th>
               <th>Created</th>
               <th />
