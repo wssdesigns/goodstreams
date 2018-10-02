@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
-import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
 
 class CreateProfile extends Component {
@@ -14,16 +13,12 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      company: '',
-      website: '',
       location: '',
-      status: '',
-      skills: '',
-      githubusername: '',
       bio: '',
+      favoriteMovie: '',
+      favoriteShow: '',
       twitter: '',
       facebook: '',
-      linkedin: '',
       youtube: '',
       instagram: '',
       errors: {}
@@ -44,16 +39,12 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
-      website: this.state.website,
       location: this.state.location,
-      status: this.state.status,
-      skills: this.state.skills,
-      githubusername: this.state.githubusername,
       bio: this.state.bio,
+      favoriteMovie: this.state.favoriteMovie,
+      favoriteShow: this.state.favoriteShow,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
-      linkedin: this.state.linkedin,
       youtube: this.state.youtube,
       instagram: this.state.instagram
     };
@@ -92,15 +83,6 @@ class CreateProfile extends Component {
           />
 
           <InputGroup
-            placeholder="Linkedin Profile URL"
-            name="linkedin"
-            icon="fab fa-linkedin"
-            value={this.state.linkedin}
-            onChange={this.onChange}
-            error={errors.linkedin}
-          />
-
-          <InputGroup
             placeholder="YouTube Channel URL"
             name="youtube"
             icon="fab fa-youtube"
@@ -121,19 +103,6 @@ class CreateProfile extends Component {
       );
     }
 
-    // Select options for status
-    const options = [
-      { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
-    ];
-
     return (
       <div className="create-profile">
         <div className="container">
@@ -143,40 +112,14 @@ class CreateProfile extends Component {
               <p className="lead text-center">
                 Let's get some information to make your profile stand out
               </p>
-              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Profile Handle"
+                  placeholder="Profile Handle*"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
-                />
-                <SelectListGroup
-                  placeholder="Status"
-                  name="status"
-                  value={this.state.status}
-                  onChange={this.onChange}
-                  options={options}
-                  error={errors.status}
-                  info="Give us an idea of where you are at in your career"
-                />
-                <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
-                  onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
-                />
-                <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Could be your own website or a company one"
+                  info="A unique handle for your profile URL"
                 />
                 <TextFieldGroup
                   placeholder="Location"
@@ -184,24 +127,7 @@ class CreateProfile extends Component {
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
-                />
-                <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
-                  onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
-                />
-                <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
-                  onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
+                  info="e.g. Brooklyn, NY"
                 />
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
@@ -210,6 +136,22 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.bio}
                   info="Tell us a little about yourself"
+                />
+                <TextFieldGroup
+                  placeholder="Favorite Movie"
+                  name="favoriteMovie"
+                  value={this.state.favoriteMovie}
+                  onChange={this.onChange}
+                  error={errors.favoriteMovie}
+                  info="e.g. Pulp Fiction"
+                />
+                <TextFieldGroup
+                  placeholder="Favorite Show"
+                  name="favoriteShow"
+                  value={this.state.favoriteShow}
+                  onChange={this.onChange}
+                  error={errors.favoriteShow}
+                  info="e.g. The Wire"
                 />
 
                 <div className="mb-3">
@@ -224,7 +166,6 @@ class CreateProfile extends Component {
                   >
                     Add Social Network Links
                   </button>
-                  <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
                 <input

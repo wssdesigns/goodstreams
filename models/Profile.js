@@ -12,34 +12,26 @@ const ProfileSchema = new Schema({
     required: true,
     max: 40
   },
-  company: {
-    type: String
-  },
-  website: {
-    type: String
-  },
   location: {
     type: String
-  },
-  status: {
-    type: String,
-    required: true
-  },
-  skills: {
-    type: [String],
-    required: true
   },
   bio: {
     type: String
   },
-  githubusername: {
+  favoriteMovie: {
     type: String
   },
-  experience: [
+  favoriteShow: {
+    type: String
+  },
+  list: [
     {
       listName: {
         type: String,
         required: true
+      },
+      category: {
+        type: String
       },
       description: {
         type: String,

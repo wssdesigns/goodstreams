@@ -60,10 +60,10 @@ export const createProfile = (profileData, history) => dispatch => {
     );
 };
 
-// Add experience
-export const addExperience = (expData, history) => dispatch => {
+// Add list
+export const createList = (expData, history) => dispatch => {
   axios
-    .post('/api/profile/experience', expData)
+    .post('/api/profile/list', expData)
     .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({
@@ -73,10 +73,10 @@ export const addExperience = (expData, history) => dispatch => {
     );
 };
 
-// Delete Experience
-export const deleteExperience = id => dispatch => {
+// Delete list
+export const deleteList = id => dispatch => {
   axios
-    .delete(`/api/profile/experience/${id}`)
+    .delete(`/api/profile/list/${id}`)
     .then(res =>
       dispatch({
         type: GET_PROFILE,

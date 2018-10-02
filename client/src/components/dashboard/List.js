@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { deleteExperience } from '../../actions/profileActions';
+import { deleteList } from '../../actions/profileActions';
 import Moment from 'react-moment';
 
-class Experience extends Component {
+class List extends Component {
   onDeleteClick(id) {
-    this.props.deleteExperience(id);
+    this.props.deleteList(id);
   }
 
   render() {
-    const experience = this.props.experience.map(exp => (
+    const list = this.props.list.map(exp => (
 
       <tr key={exp._id}>
         <td>{exp.listName}</td>
-        <td>Category</td>
+        <td>{exp.category}</td>
         <td><Moment fromNow>{exp.lastChange}</Moment></td>
         <td>
           <button
@@ -37,7 +37,7 @@ class Experience extends Component {
               <th>Updated</th>
               <th />
             </tr>
-            {experience}
+            {list}
           </thead>
         </table>
       </div>
@@ -45,8 +45,8 @@ class Experience extends Component {
   }
 }
 
-Experience.propTypes = {
-  deleteExperience: PropTypes.func.isRequired
+List.propTypes = {
+  deleteList: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteExperience })(Experience);
+export default connect(null, { deleteList })(List);

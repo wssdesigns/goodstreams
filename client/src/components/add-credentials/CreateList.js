@@ -4,14 +4,16 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addExperience } from '../../actions/profileActions';
+import { createList } from '../../actions/profileActions';
+import SelectListGroup from '../common/SelectListGroup';
 
-class AddExperience extends Component {
+class CreateList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listName: '',
       description: '',
+      category: '',
       videoOne: '',
       videoTwo: '',
       videoThree: '',
@@ -42,6 +44,7 @@ class AddExperience extends Component {
     const expData = {
       listName: this.state.listName,
       description: this.state.description,
+      category: this.state.category,
       videoOne: this.state.videoOne,
       videoTwo: this.state.videoTwo,
       videoThree: this.state.videoThree,
@@ -55,7 +58,7 @@ class AddExperience extends Component {
       lastChange: new Date()
     };
 
-    this.props.addExperience(expData, this.props.history);
+    this.props.createList(expData, this.props.history);
   }
 
   onChange(e) {
@@ -65,8 +68,18 @@ class AddExperience extends Component {
   render() {
     const { errors } = this.state;
 
+    // Select options for category
+    const options = [
+      { label: 'Select category*', value: 0 },
+      { label: 'Movies', value: 'Movies' },
+      { label: 'TV Shows', value: 'TV Shows' },
+      { label: 'Documentaries', value: 'Documentaries' },
+      { label: 'Coming Soon', value: 'Coming Soon' },
+      { label: 'Other', value: 'Other' }
+    ];
+
     return (
-      <div className="add-experience">
+      <div className="create-list">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -75,19 +88,26 @@ class AddExperience extends Component {
               </Link>
               <h1 className="display-4 text-center">Create List</h1>
               <p className="lead text-center">
-                Include movies or shows you plan to stream
+                What movies or shows do you plan to stream?
               </p>
-              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* List Name"
+                  placeholder="List Name*"
                   name="listName"
                   value={this.state.listName}
                   onChange={this.onChange}
                   error={errors.listName}
                 />
+                <SelectListGroup
+                  placeholder="Category*"
+                  name="category"
+                  value={this.state.category}
+                  onChange={this.onChange}
+                  options={options}
+                  error={errors.category}
+                />
                 <TextAreaFieldGroup
-                  placeholder="* Description"
+                  placeholder="Description*"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}
@@ -187,8 +207,8 @@ class AddExperience extends Component {
   }
 }
 
-AddExperience.propTypes = {
-  addExperience: PropTypes.func.isRequired,
+CreateList.propTypes = {
+  createList: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -198,6 +218,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addExperience })(
-  withRouter(AddExperience)
+export default connect(mapStateToProps, { createList })(
+  withRouter(CreateList)
 );

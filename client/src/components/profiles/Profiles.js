@@ -31,9 +31,9 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
-              <p className="lead text-center">
-                Browse and connect with developers
+              <h1 className="display-4 text-left">Members</h1>
+              <p className="lead text-left">
+                See what members of the GoodStreams community are watching
               </p>
               {profileItems}
             </div>
