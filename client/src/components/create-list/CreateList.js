@@ -24,7 +24,7 @@ class CreateList extends Component {
       videoEight: '',
       videoNine: '',
       videoTen: '',
-      lastChange: '1234',
+      lastChange: '',
       errors: {}
     };
 
@@ -41,7 +41,7 @@ class CreateList extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const expData = {
+    const listData = {
       listName: this.state.listName,
       description: this.state.description,
       category: this.state.category,
@@ -58,7 +58,7 @@ class CreateList extends Component {
       lastChange: new Date()
     };
 
-    this.props.createList(expData, this.props.history);
+    this.props.createList(listData, this.props.history);
   }
 
   onChange(e) {
@@ -86,8 +86,8 @@ class CreateList extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Create List</h1>
-              <p className="lead text-center">
+              <h1 className="display-4 text-left">Create List</h1>
+              <p className="lead text-left">
                 What movies or shows do you plan to stream?
               </p>
               <form onSubmit={this.onSubmit}>

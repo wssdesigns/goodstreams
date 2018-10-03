@@ -61,9 +61,9 @@ export const createProfile = (profileData, history) => dispatch => {
 };
 
 // Add list
-export const createList = (expData, history) => dispatch => {
+export const createList = (listData, history) => dispatch => {
   axios
-    .post('/api/profile/list', expData)
+    .post('/api/profile/list', listData)
     .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({

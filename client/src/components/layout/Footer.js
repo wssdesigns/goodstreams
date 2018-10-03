@@ -31,6 +31,7 @@ export default () => {
             <CardText>
               <ul style={{ color: 'grey', fontSize: '0.9rem'}} className="list-unstyled">
                 <li>About</li>
+                <li>Mission</li>
                 <li>Contact</li>
                 <li>Privacy Policy</li>
               </ul>
