@@ -14,12 +14,17 @@ export default () => {
               COMMUNITY
               <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>
-                  <Link to="/profiles">
+                  <Link to="/profiles" style={{ color: 'white' }}>
                     Members
                   </Link>
                 </li>
                 <li>
-                  <Link to="/forum">
+                  <Link to="/lists" style={{ color: 'white' }}>
+                    Lists
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/forum" style={{ color: 'white' }}>
                     Forum
                   </Link>
                 </li>
@@ -29,12 +34,17 @@ export default () => {
               COMPANY
               <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>
-                  <Link to="/about">
+                  <Link to="/about" style={{ color: 'white' }}>
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact">
+                  <Link to="/faq" style={{ color: 'white' }}>
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" style={{ color: 'white' }}>
                     Contact
                   </Link>
                 </li>
@@ -43,8 +53,9 @@ export default () => {
           <div className="col-sm">
               SOCIAL
               <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
-                <li><a href="https://www.instagram.com/goodstreamsio/">Instagram</a></li>
-                <li><a href="https://twitter.com/goodstreamsio">twitter</a></li>
+                <li><i className="fab fa-instagram"></i><a href="https://www.instagram.com/goodstreamsio/" style={{ color: 'white' }}> Instagram</a></li>
+                <li><i className="fab fa-twitter"></i><a href="https://twitter.com/goodstreamsio" style={{ color: 'white' }}> twitter</a></li>
+                <li><i className="fab fa-facebook"></i><a href="https://facebook.com/goodstreamsio" style={{ color: 'white' }}> Facebook</a></li>
               </ul>
           </div>
         </div>

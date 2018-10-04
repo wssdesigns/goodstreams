@@ -28,7 +28,7 @@ class Posts extends Component {
             <div className="col-md-12">
             <h1 className="display-4 text-left">Forum</h1>
               <p className="lead text-left">
-                See what <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> are talking about
+                See what <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> members are talking about
               </p>
               <PostForm />
               {postContent}

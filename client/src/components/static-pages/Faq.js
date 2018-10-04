@@ -6,9 +6,9 @@ export default () => {
      <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h1 className="display-4 text-left">About</h1>
+          <h1 className="display-4 text-left">FAQ</h1>
           <p className="lead text-left">
-            Learn more about <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span>
+            You've got questions. We've got answers.
           </p>
         </div>
       </div>
