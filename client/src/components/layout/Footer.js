@@ -1,56 +1,41 @@
 import React from 'react';
-import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default () => {
   return (
     <footer id="footer">
-      <Row>
-        <Col sm="3">
-          <Card body inverse style={{ backgroundColor: '#191818'}}>
-            <CardTitle style={{ color: 'grey'}}>WHAT IS <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span>?</CardTitle>
-            <CardText style={{ color: 'grey', fontSize: '0.9rem'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place to browse curated lists of the best movies and shows to stream. Find what movie or show to watch next, or create a list so you always have a list of high-quality titles to watch.</CardText>
-          </Card>
-        </Col>
-        <Col sm="3">
-          <Card body inverse style={{ backgroundColor: '#191818' }}>
-            <CardTitle style={{ color: 'grey'}}>COMMUNITY</CardTitle>
-            <CardText>
-              <ul style={{ color: 'grey', fontSize: '0.9rem'}} className="list-unstyled">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            WHAT IS GoodStreams?
+            <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place to browse curated lists of the best movies and shows to stream. Find what movie or show to watch next, or create a list so you always have a list of high-quality titles to watch.</div>
+          </div>
+          <div className="col-sm">
+              COMMUNITY
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>Members</li>
-                <li>Movies</li>
-                <li>Shows</li>
-                <li>Documentaries</li>
                 <li>Forum</li>
               </ul>
-            </CardText>
-          </Card>
-        </Col>
-        <Col sm="3">
-          <Card body inverse style={{ backgroundColor: '#191818' }}>
-            <CardTitle style={{ color: 'grey'}}>COMPANY</CardTitle>
-            <CardText>
-              <ul style={{ color: 'grey', fontSize: '0.9rem'}} className="list-unstyled">
+          </div>
+          <div className="col-sm">
+              COMPANY
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>About</li>
                 <li>Mission</li>
                 <li>Contact</li>
-                <li>Privacy Policy</li>
               </ul>
-            </CardText>
-          </Card>
-        </Col>
-        <Col sm="3">
-          <Card body inverse style={{ backgroundColor: '#191818' }}>
-            <CardTitle style={{ color: 'grey'}}>SOCIAL</CardTitle>
-            <CardText>
-            <ul style={{ color: 'grey', fontSize: '0.9rem'}} className="list-unstyled">
-                <li>Facebook</li>
-                <li>twitter</li>
+          </div>
+          <div className="col-sm">
+              SOCIAL
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>Instagram</li>
+                <li>twitter</li>
+                <i className="fab fa-facebook"> Facebook</i>
               </ul>
-            </CardText>
-          </Card>
-        </Col>
-      </Row>
+          </div>
+        </div>
+        <div style={{margin: 'auto'}}>©2018 GoodStreams Inc.</div>
+      </div>
     </footer>
   );
 };
