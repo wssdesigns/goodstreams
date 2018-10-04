@@ -24,7 +24,9 @@ import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import List from './components/list/List';
 import NotFound from './components/not-found/NotFound';
-import ListForm from './components/lists/ListForm'
+import ListForm from './components/lists/ListForm';
+import About from './components/static-pages/About';
+import Contact from './components/static-pages/Contact';
 
 import './App.css';
 
@@ -61,6 +63,8 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/about" component={About} />
               <Route exact path="/profile/:handle" component={Profile} />
               <Route exact path="/create-list" component={ListForm} />
               <Switch>
