@@ -11,7 +11,7 @@ class CreateList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listName: '',
+      videoName: '',
       description: '',
       category: '',
       videoOne: '',
@@ -42,7 +42,7 @@ class CreateList extends Component {
     e.preventDefault();
 
     const listData = {
-      listName: this.state.listName,
+      videoName: this.state.videoName,
       description: this.state.description,
       category: this.state.category,
       videoOne: this.state.videoOne,
@@ -93,10 +93,10 @@ class CreateList extends Component {
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="List Name*"
-                  name="listName"
-                  value={this.state.listName}
+                  name="videoName"
+                  value={this.state.videoName}
                   onChange={this.onChange}
-                  error={errors.listName}
+                  error={errors.videoName}
                 />
                 <SelectListGroup
                   placeholder="Category*"

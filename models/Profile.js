@@ -26,36 +26,24 @@ const ProfileSchema = new Schema({
   },
   experience: [
     {
-      title: {
+      videoName: {
         type: String,
         required: true
       },
-      company: {
-        type: String,
-        required: true
-      },
-      location: {
+      category: {
         type: String
       },
-      from: {
-        type: Date,
-        required: true
+      notes: {
+        type: String
       },
-      to: {
+      addedTime: {
         type: Date
-      },
-      current: {
-        type: Boolean,
-        default: false
-      },
-      description: {
-        type: String
       }
     }
   ],
   list: [
     {
-      listName: {
+      videoName: {
         type: String,
         required: true
       },

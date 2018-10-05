@@ -175,7 +175,7 @@ router.post(
 
     Profile.findOne({ user: req.user.id }).then(profile => {
       const newExp = {
-        listName: req.body.listName,
+        videoName: req.body.videoName,
         category: req.body.category,
         description: req.body.description,
         videoOne: req.body.videoOne,
@@ -239,8 +239,9 @@ router.delete(
 );
 
 // @route   POST api/profile/experience
-// @desc    Add experience to profile
+// @desc    Create or edit experience
 // @access  Private
+
 router.post(
   '/experience',
   passport.authenticate('jwt', { session: false }),
@@ -255,13 +256,10 @@ router.post(
 
     Profile.findOne({ user: req.user.id }).then(profile => {
       const newExp = {
-        title: req.body.title,
-        company: req.body.company,
-        location: req.body.location,
-        from: req.body.from,
-        to: req.body.to,
-        current: req.body.current,
-        description: req.body.description
+        videoName: req.body.videoName,
+        category: req.body.category,
+        notes: req.body.notes,
+        addedTime: req.body.addedTime
       };
 
       // Add to exp array

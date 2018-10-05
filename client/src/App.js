@@ -28,7 +28,8 @@ import ListForm from './components/lists/ListForm';
 import About from './components/static-pages/About';
 import Contact from './components/static-pages/Contact';
 import Faq from './components/static-pages/Faq';
-import AddExperience from './components/add-credentials/AddExperience';
+import CreateExperience from './components/add-credentials/CreateExperience';
+import EditExperience from './components/edit-experience/EditExperience';
 
 import './App.css';
 
@@ -90,8 +91,15 @@ class App extends Component {
               <Switch>
                 <PrivateRoute
                   exact
-                  path="/add-experience"
-                  component={AddExperience}
+                  path="/create-experience"
+                  component={CreateExperience}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/edit-experience"
+                  component={EditExperience}
                 />
               </Switch>
               <Switch>

@@ -13,7 +13,7 @@ class List extends Component {
     const list = this.props.list.map(exp => (
 
       <tr key={exp._id}>
-        <td>{exp.listName}</td>
+        <td>{exp.videoName}</td>
         <td>{exp.category}</td>
         <td><Moment fromNow>{exp.lastChange}</Moment></td>
         <td>

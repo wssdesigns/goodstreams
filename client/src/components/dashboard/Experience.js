@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment';
 import { deleteExperience } from '../../actions/profileActions';
+import Moment from 'react-moment';
+import { ListGroup, ListGroupItem, Button } from 'reactstrap';
 
 class Experience extends Component {
   onDeleteClick(id) {
@@ -11,17 +12,10 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
-      <tr key={exp._id}>
-        <td>{exp.company}</td>
-        <td>{exp.title}</td>
-        <td>
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
-          {exp.to === null ? (
-            ' Now'
-          ) : (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
-          )}
-        </td>
+        <tr key={exp._id}>
+        <td style={{textTransform: 'uppercase'}}>{exp.videoName}</td>
+        <td>{exp.category}</td>
+        <td><Moment fromNow>{exp.addedTime}</Moment></td>
         <td>
           <button
             onClick={this.onDeleteClick.bind(this, exp._id)}
@@ -34,13 +28,13 @@ class Experience extends Component {
     ));
     return (
       <div>
-        <h4 className="mb-4">Experience Credentials</h4>
+        <h4 className="mb-4">My List</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Company</th>
               <th>Title</th>
-              <th>Years</th>
+              <th>Category</th>
+              <th>Added</th>
               <th />
             </tr>
             {experience}
