@@ -50,10 +50,10 @@ body {
   height: 300px;
   position: relative;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 400px;
   padding-top: 20px;
   color: grey;
-  border-top: 0.5px solid grey;
+  border-top: 0.5px solid rgba(255, 255, 255, .5);
 }
 
 #main-navbar {
@@ -93,4 +93,18 @@ p.lead {
 
 #forum-header {
   margin-bottom: 1.7rem;
+}
+
+#add-title-button {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  height: 80px;
+  width: 60vw;
+  border: none;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 5vw;
+  left: 20vw;
+  z-index: 2;
+  background-color: #00bb79;
 }

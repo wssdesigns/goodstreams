@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteExperience } from '../../actions/profileActions';
 import Moment from 'react-moment';
-import { ListGroup, ListGroupItem, Button } from 'reactstrap';
 
 class Experience extends Component {
   onDeleteClick(id) {
@@ -12,34 +11,28 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
-        <tr key={exp._id}>
-        <td style={{textTransform: 'uppercase'}}>{exp.videoName}</td>
-        <td>{exp.category}</td>
-        <td><Moment fromNow>{exp.addedTime}</Moment></td>
-        <td>
+        <div key={exp._id}>
+        <div style={{textTransform: 'uppercase'}}>{exp.videoName}</div>
+        <div>{exp.category}</div>
+        <div>added <Moment fromNow>{exp.addedTime}</Moment></div>
+        <div>
+          <a className="trailer-links" href={`https://www.youtube.com/results?search_query=${exp.videoName} movie trailer`}>Trailer</a> | 
+          <a className="imdb-links" href={`https://www.imdb.com/find?ref_=nv_sr_fn&q=${exp.videoName}&s=tt`}>IMDb</a>
+        </div>
+        <div id="line-three">{exp.notes}</div>
+        <div>
           <button
             onClick={this.onDeleteClick.bind(this, exp._id)}
             className="btn btn-danger"
           >
             Delete
           </button>
-        </td>
-      </tr>
+        </div>
+      </div>
     ));
     return (
       <div>
-        <h4 className="mb-4">My List</h4>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Added</th>
-              <th />
-            </tr>
-            {experience}
-          </thead>
-        </table>
+        {experience}
       </div>
     );
   }

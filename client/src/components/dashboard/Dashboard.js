@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
-// import List from './List';
-import { Button } from 'reactstrap';
 import Experience from './Experience';
 
 class Dashboard extends Component {
@@ -31,26 +29,19 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div>
-            <p className="lead text-muted">
-              Welcome <Link id="welcome-name" to={`/profile/${profile.handle}`}>{user.name}</Link>
-            </p>
+            <h2>
+              Welcome, <Link id="welcome-name" to={`/profile/${profile.handle}`}>{user.name}</Link>
+            </h2>
+            <hr/>
             <ProfileActions />
             <Experience experience={profile.experience} />
-
-            <div style={{ marginBottom: '60px' }} />
-            <Button
-              onClick={this.onDeleteClick.bind(this)}
-              outline color="light"
-            >
-              Delete My Account
-            </Button>
           </div>
         );
       } else {
         // User is logged in but has no profile
         dashboardContent = (
           <div>
-            <p className="lead text-muted">Welcome {user.name}</p>
+            <h1>Welcome {user.name}</h1>
             <p>You have not yet created a profile</p>
             <Link to="/create-profile" className="btn btn-lg btn-success">
               Create Profile
@@ -65,7 +56,6 @@ class Dashboard extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
               {dashboardContent}
             </div>
           </div>
