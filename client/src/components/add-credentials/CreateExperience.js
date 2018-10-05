@@ -56,8 +56,7 @@ class CreateExperience extends Component {
     { label: 'Movie', value: 'Movie' },
     { label: 'TV Show', value: 'TV Show' },
     { label: 'Documentary', value: 'Documentary' },
-    { label: 'Short', value: 'Short' },
-    { label: 'Other', value: 'Other' }
+    { label: 'Short', value: 'Video' },
   ];
 
     return (

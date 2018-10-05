@@ -60,6 +60,7 @@ export default () => {
           </div>
         </div>
         <div style={{margin: 'auto'}}>&copy; {new Date().getFullYear()} GoodStreams Inc.</div>
+        <div id="footer-filler"></div>
       </div>
     </footer>
   );
