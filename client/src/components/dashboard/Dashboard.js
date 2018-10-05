@@ -7,6 +7,7 @@ import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
 import List from './List';
 import { Button } from 'reactstrap';
+import Experience from './Experience';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -34,6 +35,7 @@ class Dashboard extends Component {
               Welcome <Link id="welcome-name" to={`/profile/${profile.handle}`}>{user.name}</Link>
             </p>
             <ProfileActions />
+            <Experience experience={profile.experience} />
             <List list={profile.list} />
             <div style={{ marginBottom: '60px' }} />
             <Button
