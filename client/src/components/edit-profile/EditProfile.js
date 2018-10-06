@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
@@ -150,51 +150,47 @@ class CreateProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-light">
-                Go Back
-              </Link>
-              <h1 className="display-4 text-center">Edit Profile</h1>
-              <small className="d-block pb-3">* = required fields</small>
+            <h1 className="display-4 text-left">Edit Profile</h1>
               <form onSubmit={this.onSubmit}>
+                <label>Profile Handle</label>
                 <TextFieldGroup
-                  placeholder="* Profile Handle"
+                  placeholder="A unique handle for your profile URL"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL"
                 />
+                <label>Location</label>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="e.g. Brooklyn, NY"
                 />
+                <label>Bio</label>
                 <TextAreaFieldGroup
-                  placeholder="Short Bio"
+                  placeholder="Tell us a little about yourself"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="Tell us a little about yourself"
                 />
+                <label>Favorite Movie</label>
                 <TextFieldGroup
-                  placeholder="Favorite Movie"
+                  placeholder="e.g. Pulp Fiction"
                   name="favoriteMovie"
                   value={this.state.favoriteMovie}
                   onChange={this.onChange}
                   error={errors.favoriteMovie}
-                  info="e.g. Pulp Fiction"
                 />
+                <label>Favorite TV show</label>
                 <TextFieldGroup
-                  placeholder="Favorite Show"
+                  placeholder="e.g. The Wire"
                   name="favoriteShow"
                   value={this.state.favoriteShow}
                   onChange={this.onChange}
                   error={errors.favoriteShow}
-                  info="e.g. The Wire"
                 />
 
                 <div className="mb-3">

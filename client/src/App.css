@@ -131,8 +131,9 @@ a.imdb-links {
 }
 
 .date-video-added-caption {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
   color: grey;
+  margin-left: 5px;
 }
 #footer-filler {
   height: 200px;

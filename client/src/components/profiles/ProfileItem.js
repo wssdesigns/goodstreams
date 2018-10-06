@@ -8,23 +8,33 @@ class ProfileItem extends Component {
     const { profile } = this.props;
 
     return (
-      <div className="card card-body bg-light mb-3">
+      <div className="card card-body mb-3" style={{backgroundColor: 'rgb(37, 37, 38)', color: 'white'}}>
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             <img src={profile.user.avatar} alt="" className="rounded-circle" />
           </div>
-          <div className="col-lg-6 col-md-4 col-8 text-dark">
+          <div className="col-lg-6 col-md-4 col-8 text-light">
             <h3>{profile.user.name}</h3>
             <p>
               {isEmpty(profile.location) ? null : (
                 <span>{profile.location}</span>
               )}
             </p>
-            <Link to={`/profile/${profile.handle}`} className="btn btn-outline-dark">
-              View Profile
+            <p>
+              {isEmpty(profile.favoriteMovie) ? null : (
+                <div>Favorite movie: {profile.favoriteMovie}</div>
+              )}
+            </p>
+            <p>
+              {isEmpty(profile.favoriteShow) ? null : (
+                <div>Favorite show: {profile.favoriteShow}</div>
+              )}
+            </p>
+            <Link 
+              to={`/profile/${profile.handle}`} 
+              className="btn btn-sm btn-outline-success">
+              Browse watch list
             </Link>
-          </div>
-          <div className="col-md-4 d-none d-md-block">
           </div>
         </div>
       </div>

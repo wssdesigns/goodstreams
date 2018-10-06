@@ -8,9 +8,9 @@ class ProfileHeader extends Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="card card-body bg-dark text-white mb-3">
+          <div className="card card-body text-white mb-3" style={{backgroundColor: 'rgb(37, 37, 38)'}}>
             <div className="row">
-              <div className="col-4 col-md-3 m-auto">
+              <div className="col-4 col-md-2 m-auto">
                 <img
                   className="rounded-circle"
                   src={profile.user.avatar}
@@ -19,7 +19,7 @@ class ProfileHeader extends Component {
               </div>
             </div>
             <div className="text-center">
-              <h1 className="display-7 text-center">{profile.user.name}</h1>
+              <h2 className="display-7 text-center">{profile.user.name}</h2>
               <p className="lead text-center">
                 {profile.status}{' '}
                 {isEmpty(profile.company) ? null : (

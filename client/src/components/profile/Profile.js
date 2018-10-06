@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import ProfileHeader from './ProfileHeader';
-import ProfileAbout from './ProfileAbout';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
+import Experience from '../dashboard/Experience';
 
 class Profile extends Component {
   componentDidMount() {
@@ -30,15 +29,10 @@ class Profile extends Component {
       profileContent = (
         <div>
           <div className="row">
-            <div className="col-md-6">
-              <Link to="/profiles" className="btn btn-light mb-3 float-left">
-                Back To Profiles
-              </Link>
-            </div>
             <div className="col-md-6" />
           </div>
           <ProfileHeader profile={profile} />
-          <ProfileAbout profile={profile} />
+          <Experience experience={profile.experience} />
         </div>
       );
     }

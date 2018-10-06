@@ -33,7 +33,7 @@ class Profiles extends Component {
             <div className="col-md-12">
               <h1 className="display-4 text-left">Members</h1>
               <p className="lead text-left">
-                See what members of the GoodStreams community are watching
+                See what your friends are watching and get ideas for what to watch next
               </p>
               {profileItems}
             </div>
