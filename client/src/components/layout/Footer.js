@@ -19,11 +19,6 @@ export default () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/lists" style={{ color: 'white' }}>
-                    Lists
-                  </Link>
-                </li>
-                <li>
                   <Link to="/forum" style={{ color: 'white' }}>
                     Forum
                   </Link>
@@ -59,7 +54,7 @@ export default () => {
               </ul>
           </div>
         </div>
-        <div style={{margin: 'auto'}}>&copy; {new Date().getFullYear()} GoodStreams Inc.</div>
+        <div style={{margin: 'auto'}}>&copy; {new Date().getFullYear()} <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> Inc.</div>
         <div id="footer-filler"></div>
       </div>
     </footer>

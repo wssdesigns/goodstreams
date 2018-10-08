@@ -27,13 +27,13 @@ class Profiles extends Component {
     }
 
     return (
-      <div className="profiles">
+      <div className="profiles" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-left">Members</h1>
               <p className="lead text-left">
-                See what your friends are watching and get ideas for what to watch next
+                See what your friends are watching and get ideas for what to watch
               </p>
               {profileItems}
             </div>

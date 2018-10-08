@@ -22,17 +22,17 @@ class Posts extends Component {
     }
 
     return (
-      <div className="feed">
+      <div className="feed" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
             <h1 className="display-4 text-left">Forum</h1>
-              <p className="lead text-left">
-                Join the conversation
-              </p>
               <PostForm/>
               <hr/>
               <h3>Topics</h3>
+              <p className="lead text-left">
+                Join the conversation
+              </p>
               {postContent}
             </div>
           </div>

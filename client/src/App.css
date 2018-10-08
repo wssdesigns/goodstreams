@@ -46,14 +46,14 @@ body {
 }
 
 #footer {
-  height: 400px;
+  background-color: rgb(37, 37, 38);
+  height: 800px;
   position: relative;
   text-align: center;
-  margin-top: 400px;
+  padding-top: 100px;
   padding-bottom: 100px;
   padding-top: 20px;
   color: grey;
-  border-top: 0.5px solid rgba(255, 255, 255, .5);
 }
 
 #main-navbar {

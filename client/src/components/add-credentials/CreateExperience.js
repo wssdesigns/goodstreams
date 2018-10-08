@@ -6,6 +6,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { createExperience } from '../../actions/profileActions';
 import SelectListGroup from '../common/SelectListGroup';
+import { Link } from 'react-router-dom';
 
 
 class CreateExperience extends Component {
@@ -60,7 +61,7 @@ class CreateExperience extends Component {
   ];
 
     return (
-      <div className="create-experience">
+      <div className="create-experience" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -95,6 +96,11 @@ class CreateExperience extends Component {
                   className="btn btn-success btn-block mt-4"
                 />
               </form>
+              <div style={{textAlign: 'center', marginTop: '20px'}}>
+                <Link style={{color: 'white'}} className="nav-link" to="/register">
+                  Cancel
+                </Link>
+              </div>
             </div>
           </div>
         </div>

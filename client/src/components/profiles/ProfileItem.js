@@ -22,18 +22,18 @@ class ProfileItem extends Component {
             </p>
             <p>
               {isEmpty(profile.favoriteMovie) ? null : (
-                <div>Favorite movie: {profile.favoriteMovie}</div>
+                <span>Favorite movie: {profile.favoriteMovie}</span>
               )}
             </p>
             <p>
               {isEmpty(profile.favoriteShow) ? null : (
-                <div>Favorite show: {profile.favoriteShow}</div>
+                <span>Favorite show: {profile.favoriteShow}</span>
               )}
             </p>
             <Link 
               to={`/profile/${profile.handle}`} 
-              className="btn btn-sm btn-outline-success">
-              Browse watch list
+              className="btn btn-md btn-outline-light">
+              <i class="fa fa-list" aria-hidden="true"></i>  Browse watchlist
             </Link>
           </div>
         </div>

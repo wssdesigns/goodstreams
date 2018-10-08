@@ -27,11 +27,12 @@ class Profile extends Component {
       profileContent = <Spinner />;
     } else {
       profileContent = (
-        <div>
+        <div style={{marginBottom: '400px'}}>
           <div className="row">
             <div className="col-md-6" />
           </div>
           <ProfileHeader profile={profile} />
+          <h2>Watchlist</h2>
           <Experience experience={profile.experience} />
         </div>
       );
