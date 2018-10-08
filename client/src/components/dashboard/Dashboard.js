@@ -33,7 +33,7 @@ class Dashboard extends Component {
             <h6 style={{marginBottom: '20px', color: 'grey'}}>
               Welcome, <Link id="welcome-name" to={`/profile/${profile.handle}`}>{firstName}</Link>
             </h6>
-            <h2>My Watchlist</h2>
+            <h1>My Watchlist</h1>
             <ProfileActions />
             <Experience experience={profile.experience} />
           </div>

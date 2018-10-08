@@ -170,7 +170,7 @@ class CreateProfile extends Component {
                 />
                 <label>Bio</label>
                 <TextAreaFieldGroup
-                  placeholder="Tell us a little about yourself"
+                  placeholder="What kind of movies and shows do you like?"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}

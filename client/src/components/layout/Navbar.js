@@ -19,23 +19,18 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
+          <Link className="nav-link" to="/profiles">
+            <i className="far fa-compass"></i> Explore
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
-            My Watchlist
+            <i className="fa fa-list" aria-hidden="true"></i> My Watchlist
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/edit-profile">
-            Edit Profile
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/profiles">
-            Members
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/forum">
-            Forum
+          <i className="far fa-user"></i> Edit Profile
           </Link>
         </li>
         <li className="nav-item">
@@ -62,16 +57,6 @@ class Navbar extends Component {
         <li className="nav-item">
           <Link className="nav-link" to="/login">
             Login
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/profiles">
-            Members
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/forum">
-            Forum
           </Link>
         </li>
       </ul>

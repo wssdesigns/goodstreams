@@ -98,15 +98,13 @@ p.lead {
 #add-title-button {
   font-size: 1.2rem;
   font-weight: bolder;
-  height: 80px;
-  width: 60vw;
   border: none;
-  border-radius: 10px;
-  position: fixed;
-  bottom: 5vw;
-  left: 20vw;
+  border-radius: 5px;
+  border: 1px solid white;
   z-index: 2;
-  background-color: #00bb79;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
 }
 a.trailer-links {
   color: #00bb79;

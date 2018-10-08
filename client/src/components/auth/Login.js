@@ -53,7 +53,7 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login">
+      <div className="login" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -81,7 +81,7 @@ class Login extends Component {
               </form>
               <div style={{textAlign: 'center', marginTop: '20px'}}>
                 <Link style={{color: 'white'}} className="nav-link" to="/register">
-                  Or Sign Up
+                  or Sign Up
                 </Link>
               </div>
             </div>

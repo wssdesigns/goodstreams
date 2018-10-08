@@ -54,7 +54,7 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="register">
+      <div className="register" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -95,7 +95,7 @@ class Register extends Component {
               </form>
               <div style={{textAlign: 'center', marginTop: '20px'}}>
                 <Link style={{color: 'white'}} className="nav-link" to="/login">
-                  Or Login
+                  or Login
                 </Link>
               </div>
             </div>

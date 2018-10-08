@@ -33,7 +33,7 @@ class ProfileItem extends Component {
             <Link 
               to={`/profile/${profile.handle}`} 
               className="btn btn-md btn-outline-light">
-              <i class="fa fa-list" aria-hidden="true"></i>  Browse watchlist
+              <i className="fa fa-list" aria-hidden="true"></i>  Browse Watchlist
             </Link>
           </div>
         </div>

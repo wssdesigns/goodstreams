@@ -31,9 +31,9 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-left">Members</h1>
+              <h1 className="display-4 text-left">Explore</h1>
               <p className="lead text-left">
-                See what your friends are watching and get ideas for what to watch
+                Browse watchlists and get ideas for what to watch
               </p>
               {profileItems}
             </div>
