@@ -57,11 +57,11 @@ class Login extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
+              <h3 className="text-center" style={{marginBottom: '20px'}}>Log In</h3>
 
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Email Address"
+                  placeholder="Email"
                   name="email"
                   type="email"
                   value={this.state.email}
@@ -77,11 +77,12 @@ class Login extends Component {
                   onChange={this.onChange}
                   error={errors.password}
                 />
-                <input type="submit" className="btn btn-success btn-block mt-4" />
+                <input type="submit" className="btn btn-success btn-block mt-4" value="Log In"/>
               </form>
-              <div style={{textAlign: 'center', marginTop: '20px'}}>
+              <div style={{textAlign: 'center', marginTop: '20px', fontSize: '0.8rem', color: 'grey'}}>
+                Not a member?
                 <Link style={{color: 'white'}} className="nav-link" to="/register">
-                  or Sign Up
+                  Sign Up
                 </Link>
               </div>
             </div>

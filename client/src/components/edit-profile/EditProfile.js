@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 
@@ -12,16 +11,11 @@ class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displaySocialInputs: false,
       handle: '',
       location: '',
       bio: '',
       favoriteMovie: '',
       favoriteShow: '',
-      twitter: '',
-      facebook: '',
-      youtube: '',
-      instagram: '',
       errors: {}
     };
 
@@ -47,31 +41,13 @@ class CreateProfile extends Component {
       profile.favoriteMovie = !isEmpty(profile.favoriteMovie) ? profile.favoriteMovie : '';
       profile.favoriteShow = !isEmpty(profile.favoriteShow) ? profile.favoriteShow : '';
 
-      profile.social = !isEmpty(profile.social) ? profile.social : {};
-      profile.twitter = !isEmpty(profile.social.twitter)
-        ? profile.social.twitter
-        : '';
-      profile.facebook = !isEmpty(profile.social.facebook)
-        ? profile.social.facebook
-        : '';
-      profile.youtube = !isEmpty(profile.social.youtube)
-        ? profile.social.youtube
-        : '';
-      profile.instagram = !isEmpty(profile.social.instagram)
-        ? profile.social.instagram
-        : '';
-
       // Set component fields state
       this.setState({
         handle: profile.handle,
         location: profile.location,
         bio: profile.bio,
         favoriteMovie: profile.favoriteMovie,
-        favoriteShow: profile.favoriteShow,
-        twitter: profile.twitter,
-        facebook: profile.facebook,
-        youtube: profile.youtube,
-        instagram: profile.instagram
+        favoriteShow: profile.favoriteShow
       });
     }
   }
@@ -84,11 +60,7 @@ class CreateProfile extends Component {
       location: this.state.location,
       bio: this.state.bio,
       favoriteMovie: this.state.favoriteMovie,
-      favoriteShow: this.state.favoriteShow,
-      twitter: this.state.twitter,
-      facebook: this.state.facebook,
-      youtube: this.state.youtube,
-      instagram: this.state.instagram
+      favoriteShow: this.state.favoriteShow
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -99,60 +71,16 @@ class CreateProfile extends Component {
   }
 
   render() {
-    const { errors, displaySocialInputs } = this.state;
-
-    let socialInputs;
-
-    if (displaySocialInputs) {
-      socialInputs = (
-        <div>
-          <InputGroup
-            placeholder="Twitter Profile URL"
-            name="twitter"
-            icon="fab fa-twitter"
-            value={this.state.twitter}
-            onChange={this.onChange}
-            error={errors.twitter}
-          />
-
-          <InputGroup
-            placeholder="Facebook Page URL"
-            name="facebook"
-            icon="fab fa-facebook"
-            value={this.state.facebook}
-            onChange={this.onChange}
-            error={errors.facebook}
-          />
-
-          <InputGroup
-            placeholder="YouTube Channel URL"
-            name="youtube"
-            icon="fab fa-youtube"
-            value={this.state.youtube}
-            onChange={this.onChange}
-            error={errors.youtube}
-          />
-
-          <InputGroup
-            placeholder="Instagram Page URL"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            error={errors.instagram}
-          />
-        </div>
-      );
-    }
+    const { errors } = this.state;
 
     return (
       <div className="create-profile" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-            <h1 className="display-4 text-left">Edit Profile</h1>
+            <h3 className="text-left">Edit Profile</h3>
               <form onSubmit={this.onSubmit}>
-                <label>Profile Handle</label>
+                <small style={{color:'grey'}}>Profile Handle</small>
                 <TextFieldGroup
                   placeholder="A unique handle for your profile URL"
                   name="handle"
@@ -160,7 +88,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                 />
-                <label>Location</label>
+                <small style={{color:'grey'}}>Location</small>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -168,7 +96,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.location}
                 />
-                <label>Bio</label>
+                <small style={{color:'grey'}}>Bio</small>
                 <TextAreaFieldGroup
                   placeholder="What kind of movies and shows do you like?"
                   name="bio"
@@ -176,7 +104,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.bio}
                 />
-                <label>Favorite Movie</label>
+                <small style={{color:'grey'}}>Favorite Movie</small>
                 <TextFieldGroup
                   placeholder="e.g. Pulp Fiction"
                   name="favoriteMovie"
@@ -184,7 +112,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.favoriteMovie}
                 />
-                <label>Favorite TV show</label>
+                <small style={{color:'grey'}}>Favorite TV show</small>
                 <TextFieldGroup
                   placeholder="e.g. The Wire"
                   name="favoriteShow"
@@ -193,20 +121,7 @@ class CreateProfile extends Component {
                   error={errors.favoriteShow}
                 />
 
-                <div className="mb-3">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      this.setState(prevState => ({
-                        displaySocialInputs: !prevState.displaySocialInputs
-                      }));
-                    }}
-                    className="btn btn-light"
-                  >
-                    Add Social Network Links
-                  </button>
-                </div>
-                {socialInputs}
+
                 <input
                   type="submit"
                   value="Submit"

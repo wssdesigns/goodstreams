@@ -4,23 +4,17 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
 import { createProfile } from '../../actions/profileActions';
 
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displaySocialInputs: false,
       handle: '',
       location: '',
       bio: '',
       favoriteMovie: '',
       favoriteShow: '',
-      twitter: '',
-      facebook: '',
-      youtube: '',
-      instagram: '',
       errors: {}
     };
 
@@ -43,10 +37,6 @@ class CreateProfile extends Component {
       bio: this.state.bio,
       favoriteMovie: this.state.favoriteMovie,
       favoriteShow: this.state.favoriteShow,
-      twitter: this.state.twitter,
-      facebook: this.state.facebook,
-      youtube: this.state.youtube,
-      instagram: this.state.instagram
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -57,117 +47,55 @@ class CreateProfile extends Component {
   }
 
   render() {
-    const { errors, displaySocialInputs } = this.state;
-
-    let socialInputs;
-
-    if (displaySocialInputs) {
-      socialInputs = (
-        <div>
-          <InputGroup
-            placeholder="Twitter Profile URL"
-            name="twitter"
-            icon="fab fa-twitter"
-            value={this.state.twitter}
-            onChange={this.onChange}
-            error={errors.twitter}
-          />
-
-          <InputGroup
-            placeholder="Facebook Page URL"
-            name="facebook"
-            icon="fab fa-facebook"
-            value={this.state.facebook}
-            onChange={this.onChange}
-            error={errors.facebook}
-          />
-
-          <InputGroup
-            placeholder="YouTube Channel URL"
-            name="youtube"
-            icon="fab fa-youtube"
-            value={this.state.youtube}
-            onChange={this.onChange}
-            error={errors.youtube}
-          />
-
-          <InputGroup
-            placeholder="Instagram Page URL"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            error={errors.instagram}
-          />
-        </div>
-      );
-    }
+    const { errors } = this.state;
 
     return (
-      <div className="create-profile">
+      <div className="create-profile" style={{marginBottom: '400px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Create Your Profile</h1>
-              <p className="lead text-center">
-                Let's get some information to make your profile stand out
-              </p>
+              <h3 className="text-center">Create Your Profile</h3>
               <form onSubmit={this.onSubmit}>
+                <small style={{color:'grey'}}>Profile Handle</small>
                 <TextFieldGroup
                   placeholder="Profile Handle*"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL"
                 />
+                <small style={{color:'grey'}}>Location</small>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="e.g. Brooklyn, NY"
                 />
+                <small style={{color:'grey'}}>Bio</small>
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="Tell us a little about yourself"
                 />
+                <small style={{color:'grey'}}>Favorite Movie</small>
                 <TextFieldGroup
                   placeholder="Favorite Movie"
                   name="favoriteMovie"
                   value={this.state.favoriteMovie}
                   onChange={this.onChange}
                   error={errors.favoriteMovie}
-                  info="e.g. Pulp Fiction"
                 />
+                <small style={{color:'grey'}}>Favorite Show</small>
                 <TextFieldGroup
                   placeholder="Favorite Show"
                   name="favoriteShow"
                   value={this.state.favoriteShow}
                   onChange={this.onChange}
                   error={errors.favoriteShow}
-                  info="e.g. The Wire"
                 />
-
-                <div className="mb-3">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      this.setState(prevState => ({
-                        displaySocialInputs: !prevState.displaySocialInputs
-                      }));
-                    }}
-                    className="btn btn-light"
-                  >
-                    Add Social Network Links
-                  </button>
-                </div>
-                {socialInputs}
                 <input
                   type="submit"
                   value="Submit"

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 
+
 class Landing extends Component {
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
@@ -17,7 +18,7 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-5 mb-4">Discover high-quality movies and shows</h1>
+                <h3 className="display-5">Discover high-quality movies and shows</h3>
                 <p className="lead">
                   {' '}
                   Spend less time researching what to watch

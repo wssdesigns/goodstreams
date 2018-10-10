@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
-import { clearCurrentProfile } from '../../actions/profileActions';
+import { clearCurrentProfile, getCurrentProfile } from '../../actions/profileActions';
 import logo from '../../img/logo-white-100px.png';
 
 class Navbar extends Component {
+
   onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();
@@ -14,33 +15,48 @@ class Navbar extends Component {
   }
 
   render() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticated, user } = this.props.auth;
+    const { profile } = this.props.profile;
+    let profileNav;
+
+    if (profile === null) {
+      profileNav = null;
+    } else {
+      profileNav = <Link className="nav-link" to={`/profile/${profile.handle}`}>
+      Profile
+    </Link>
+    }
+
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/profiles">
-            <i className="far fa-compass"></i> Explore
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
-            <i className="fa fa-list" aria-hidden="true"></i> My Watchlist
+            Watchlist
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/edit-profile">
-          <i className="far fa-user"></i> Edit Profile
+          <Link className="nav-link" to="/profiles">
+            Explore
           </Link>
         </li>
         <li className="nav-item">
+          {profileNav}
         </li>
+
         <li className="nav-item">
           <a
             href="/"
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
+             <img
+              className="rounded-circle"
+              src={user.avatar}
+              alt={user.name}
+              style={{ width: '25px', marginRight: '5px' }}
+              title="You must have a Gravatar connected to your email to display an image"
+            />{' '}
             Logout
           </a>
         </li>
@@ -50,13 +66,14 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/register">
+          <Link
+            className="nav-link" to="/register">
             Sign Up
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/login">
-            Login
+            Log In
           </Link>
         </li>
       </ul>
@@ -88,14 +105,17 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
+  getCurrentProfile: PropTypes.func.isRequired,
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
+  profile: state.profile,
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(
+export default connect(mapStateToProps, { logoutUser, clearCurrentProfile, getCurrentProfile })(
   Navbar
 );

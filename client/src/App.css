@@ -3,9 +3,13 @@ img {
 }
 
 body {
-  background-color: #333333;
+  background-color: black;
   color: white;
 
+}
+
+hr {
+  color: white;
 }
 
 .landing {
@@ -97,19 +101,22 @@ p.lead {
 
 #add-title-button {
   font-size: 1.2rem;
-  font-weight: bolder;
   border: none;
   border-radius: 5px;
-  border: 1px solid white;
   z-index: 2;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: transparent;
+  background-color: #28a745;
+  text-decoration: none;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
 a.trailer-links {
   color: #00bb79;
   font-weight: lighter;
-  margin-left: 5px;
 }
 
 a.imdb-links {
@@ -121,7 +128,6 @@ a.imdb-links {
 .notes {
   color: grey;
   font-weight: lighter;
-  margin-left: 5px;
 }
 
 .remove-video-button {
@@ -129,9 +135,8 @@ a.imdb-links {
 }
 
 .date-video-added-caption {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: grey;
-  margin-left: 5px;
 }
 #footer-filler {
   height: 200px;

@@ -11,8 +11,8 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
-        <div key={exp._id} style={{ backgroundColor: '#252526', padding: '20px', marginBottom: '2px' }}>
-        <div style={{textTransform: 'uppercase'}}>{exp.videoName}</div>
+        <div key={exp._id} style={{ backgroundColor: '#252526', padding: '20px', marginBottom: '10px' }}>
+        <div style={{textTransform: 'uppercase', fontSize: '1.3rem'}}>{exp.videoName}</div>
         <div className="date-video-added-caption">you added this <span style={{textTransform: 'lowercase'}}>{exp.category}</span> <Moment fromNow>{exp.addedTime}</Moment></div>
         <div>
           <a className="trailer-links" href={`https://www.youtube.com/results?search_query=${exp.videoName} movie trailer`}>

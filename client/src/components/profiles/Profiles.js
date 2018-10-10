@@ -31,7 +31,7 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-left">Explore</h1>
+              <h3 className="text-left">Explore</h3>
               <p className="lead text-left">
                 Browse watchlists and get ideas for what to watch
               </p>

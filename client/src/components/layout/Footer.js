@@ -5,7 +5,7 @@ export default () => {
   return (
     <footer id="footer">
       <div className="container">
-        <div className="row">
+        <div className="row" style={{marginTop: '30px'}}>
           <div className="col-sm">
             WHAT IS <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span>?
             <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place to browse curated lists of the best movies and shows to stream. Find what movie or show to watch next, or create a list so you always have a list of high-quality titles to watch.</div>
@@ -15,7 +15,7 @@ export default () => {
               <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
                 <li>
                   <Link to="/profiles" style={{ color: 'white' }}>
-                    Members
+                    Explore
                   </Link>
                 </li>
                 <li>

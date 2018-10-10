@@ -19,7 +19,7 @@ class Dashboard extends Component {
   render() {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
-    const firstName = user.name.trim().split(' ')[0];
+    // const firstName = user.name.trim().split(' ')[0];
 
     let dashboardContent;
 
@@ -30,9 +30,6 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div style={{marginBottom: '400px'}}>
-            <h6 style={{marginBottom: '20px', color: 'grey'}}>
-              Welcome, <Link id="welcome-name" to={`/profile/${profile.handle}`}>{firstName}</Link>
-            </h6>
             <h1>My Watchlist</h1>
             <ProfileActions />
             <Experience experience={profile.experience} />
@@ -41,12 +38,15 @@ class Dashboard extends Component {
       } else {
         // User is logged in but has no profile
         dashboardContent = (
-          <div>
-            <h1>Welcome {user.name}</h1>
-            <p>You have not yet created a profile</p>
+          <div style={{marginBottom: '400px'}}>
+            <h3>Welcome {user.name}</h3>
+            <p style={{color: 'grey'}}>You have not yet created a profile</p>
             <Link to="/create-profile" className="btn btn-lg btn-success">
               Create Profile
             </Link>
+            <hr/>
+              <p><i className="fas fa-check"></i>  Create a watchlist of movies and shows you plan to watch</p>
+              <p><i className="fas fa-check"></i>  See what your friends are watching for ideas on what to watch next</p>
           </div>
         );
       }

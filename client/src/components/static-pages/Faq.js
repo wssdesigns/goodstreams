@@ -6,7 +6,7 @@ export default () => {
      <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h1 className="display-4 text-left">FAQ</h1>
+          <h3 className="text-left">FAQ</h3>
           <p className="lead text-left">
             You've got questions. We've got answers.
           </p>

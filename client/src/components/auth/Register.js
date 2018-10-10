@@ -58,7 +58,7 @@ class Register extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Sign Up</h1>
+              <h3 className="text-center" style={{marginBottom: '20px'}}>Sign Up</h3>
               <form noValidate onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="Name"
@@ -91,11 +91,12 @@ class Register extends Component {
                   onChange={this.onChange}
                   error={errors.password2}
                 />
-                <input type="submit" className="btn btn-success btn-block mt-4" />
+                <input type="submit" className="btn btn-success btn-block mt-4" value="Sign Up"/>
               </form>
-              <div style={{textAlign: 'center', marginTop: '20px'}}>
+              <div style={{textAlign: 'center', marginTop: '20px', fontSize: '0.8rem', color: 'grey'}}>
+                Already a member?
                 <Link style={{color: 'white'}} className="nav-link" to="/login">
-                  or Login
+                  Log in
                 </Link>
               </div>
             </div>

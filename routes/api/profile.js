@@ -125,13 +125,6 @@ router.post(
     if (req.body.favoriteMovie) profileFields.favoriteMovie = req.body.favoriteMovie;
     if (req.body.favoriteShow) profileFields.favoriteShow = req.body.favoriteShow;
 
-    // Social
-    profileFields.social = {};
-    if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-    if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-    if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
-
     Profile.findOne({ user: req.user.id }).then(profile => {
       if (profile) {
         // Update
