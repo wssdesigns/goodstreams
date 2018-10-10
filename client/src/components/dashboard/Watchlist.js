@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { deleteExperience } from '../../actions/profileActions';
+import { deleteWatchlist } from '../../actions/profileActions';
 import Moment from 'react-moment';
 
-class Experience extends Component {
+class Watchlist extends Component {
   onDeleteClick(id) {
-    this.props.deleteExperience(id);
+    this.props.deleteWatchlist(id);
   }
 
   render() {
-    const experience = this.props.experience.map(exp => (
+    const watchlistContent = this.props.watchlist.map(exp => (
         <div key={exp._id} style={{ backgroundColor: '#252526', padding: '20px', marginBottom: '10px' }}>
         <div style={{textTransform: 'uppercase', fontSize: '1.3rem'}}>{exp.videoName}</div>
         <div className="date-video-added-caption">you added this <span style={{textTransform: 'lowercase'}}>{exp.category}</span> <Moment fromNow>{exp.addedTime}</Moment></div>
@@ -33,14 +33,14 @@ class Experience extends Component {
     ));
     return (
       <div>
-        {experience}
+        {watchlistContent}
       </div>
     );
   }
 }
 
-Experience.propTypes = {
-  deleteExperience: PropTypes.func.isRequired
+Watchlist.propTypes = {
+  deleteWatchlist: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteExperience })(Experience);
+export default connect(null, { deleteWatchlist })(Watchlist);

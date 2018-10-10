@@ -113,10 +113,10 @@ export const clearCurrentProfile = () => {
   };
 };
 
-// Add experience
-export const createExperience = (expData, history) => dispatch => {
+// Add watchlist
+export const createWatchlist = (expData, history) => dispatch => {
   axios
-    .post('/api/profile/experience', expData)
+    .post('/api/profile/watchlist', expData)
     .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({
@@ -126,10 +126,10 @@ export const createExperience = (expData, history) => dispatch => {
     );
 };
 
-// Delete Experience
-export const deleteExperience = id => dispatch => {
+// Delete watchlist
+export const deleteWatchlist = id => dispatch => {
   axios
-    .delete(`/api/profile/experience/${id}`)
+    .delete(`/api/profile/watchlist/${id}`)
     .then(res =>
       dispatch({
         type: GET_PROFILE,

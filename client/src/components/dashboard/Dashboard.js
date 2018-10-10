@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
-import Experience from './Experience';
+import Watchlist from './Watchlist';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -32,7 +32,7 @@ class Dashboard extends Component {
           <div style={{marginBottom: '400px'}}>
             <h1>My Watchlist</h1>
             <ProfileActions />
-            <Experience experience={profile.experience} />
+            <Watchlist watchlist={profile.watchlist} />
           </div>
         );
       } else {

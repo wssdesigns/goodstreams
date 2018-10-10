@@ -24,7 +24,7 @@ const ProfileSchema = new Schema({
   favoriteShow: {
     type: String
   },
-  experience: [
+  watchlist: [
     {
       videoName: {
         type: String,

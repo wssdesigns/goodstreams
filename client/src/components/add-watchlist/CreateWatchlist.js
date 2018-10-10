@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { createExperience } from '../../actions/profileActions';
+import { CreateWatchlist } from '../../actions/profileActions';
 import SelectListGroup from '../common/SelectListGroup';
 import { Link } from 'react-router-dom';
 
 
-class CreateExperience extends Component {
+class CreateWatchlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +40,7 @@ class CreateExperience extends Component {
       addedTime: new Date()
     };
 
-    this.props.createExperience(expData, this.props.history);
+    this.props.CreateWatchlist(expData, this.props.history);
   }
 
   onChange(e) {
@@ -109,17 +109,17 @@ class CreateExperience extends Component {
   }
 }
 
-CreateExperience.propTypes = {
+CreateWatchlist.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  experience: state.experience,
+  watchlist: state.watchlist,
   profile: state.profile,
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { createExperience })(
-  withRouter(CreateExperience)
+export default connect(mapStateToProps, { CreateWatchlist })(
+  withRouter(CreateWatchlist)
 );

@@ -5,7 +5,7 @@ const passport = require('passport');
 
 // Load Validation
 const validateProfileInput = require('../../validation/profile');
-const validateExperienceInput = require('../../validation/experience');
+const validateWatchlistInput = require('../../validation/watchlist');
 
 // Load Profile Model
 const Profile = require('../../models/Profile');
@@ -165,15 +165,15 @@ router.delete(
   }
 );
 
-// @route   POST api/profile/experience
-// @desc    Create or edit experience
+// @route   POST api/profile/watchlist
+// @desc    Create or edit watchlist
 // @access  Private
 
 router.post(
-  '/experience',
+  '/watchlist',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateExperienceInput(req.body);
+    const { errors, isValid } = validateWatchlistInput(req.body);
 
     // Check Validation
     if (!isValid) {
@@ -190,29 +190,29 @@ router.post(
       };
 
       // Add to exp array
-      profile.experience.unshift(newExp);
+      profile.watchlist.unshift(newExp);
 
       profile.save().then(profile => res.json(profile));
     });
   }
 );
 
-// @route   DELETE api/profile/experience/:exp_id
-// @desc    Delete experience from profile
+// @route   DELETE api/profile/watchlist/:exp_id
+// @desc    Delete watchlist from profile
 // @access  Private
 router.delete(
-  '/experience/:exp_id',
+  '/watchlist/:exp_id',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     Profile.findOne({ user: req.user.id })
       .then(profile => {
         // Get remove index
-        const removeIndex = profile.experience
+        const removeIndex = profile.watchlist
           .map(item => item.id)
           .indexOf(req.params.exp_id);
 
         // Splice out of array
-        profile.experience.splice(removeIndex, 1);
+        profile.watchlist.splice(removeIndex, 1);
 
         // Save
         profile.save().then(profile => res.json(profile));

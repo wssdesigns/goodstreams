@@ -26,8 +26,8 @@ import NotFound from './components/not-found/NotFound';
 import About from './components/static-pages/About';
 import Contact from './components/static-pages/Contact';
 import Faq from './components/static-pages/Faq';
-import CreateExperience from './components/add-credentials/CreateExperience';
-import EditExperience from './components/edit-experience/EditExperience';
+import CreateWatchlist from './components/add-credentials/CreateWatchlist';
+import EditWatchlist from './components/edit-watchlist/EditWatchlist';
 
 import './App.css';
 
@@ -88,15 +88,15 @@ class App extends Component {
               <Switch>
                 <PrivateRoute
                   exact
-                  path="/create-experience"
-                  component={CreateExperience}
+                  path="/create-watchlist"
+                  component={CreateWatchlist}
                 />
               </Switch>
               <Switch>
                 <PrivateRoute
                   exact
-                  path="/edit-experience"
-                  component={EditExperience}
+                  path="/edit-watchlist"
+                  component={EditWatchlist}
                 />
               </Switch>
               <Switch>

@@ -4,10 +4,10 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { createExperience, getCurrentProfile } from '../../actions/profileActions';
+import { createWatchlist, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 
-class CreateExperience extends Component {
+class CreateWatchlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,17 +29,17 @@ class CreateExperience extends Component {
       this.setState({ errors: nextProps.errors });
     }
 
-    if (nextProps.profile.experience) {
-      const experience = nextProps.profile.experience;
+    if (nextProps.profile.watchlist) {
+      const watchlist = nextProps.profile.watchlist;
 
       // If list field doesnt exist, make empty string
-      experience.videoName = !isEmpty(experience.videoName) ? experience.videoName : '';
-      experience.description = !isEmpty(experience.description) ? experience.description : '';
+      watchlist.videoName = !isEmpty(watchlist.videoName) ? watchlist.videoName : '';
+      watchlist.description = !isEmpty(watchlist.description) ? watchlist.description : '';
 
       // Set component fields state
       this.setState({
-        videoName: experience.videoName,
-        description: experience.description,
+        videoName: watchlist.videoName,
+        description: watchlist.description,
       });
     }
   }
@@ -52,7 +52,7 @@ class CreateExperience extends Component {
       description: this.state.description
     };
 
-    this.props.createExperience(expData, this.props.history);
+    this.props.createWatchlist(expData, this.props.history);
   }
 
   onChange(e) {
@@ -70,7 +70,7 @@ class CreateExperience extends Component {
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Edit Experience</h1>
+              <h1 className="display-4 text-center">Edit Watchlist</h1>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* List Name"
@@ -100,8 +100,8 @@ class CreateExperience extends Component {
   }
 }
 
-CreateExperience.propTypes = {
-  createExperience: PropTypes.func.isRequired,
+CreateWatchlist.propTypes = {
+  createWatchlist: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -111,6 +111,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { createExperience, getCurrentProfile })(
-  withRouter(CreateExperience)
+export default connect(mapStateToProps, { createWatchlist, getCurrentProfile })(
+  withRouter(CreateWatchlist)
 );

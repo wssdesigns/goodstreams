@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 
 const ProfileActions = () => {
   return (
-      <Link to="/create-experience">
+      <Link to="/create-watchlist">
         <Button block id="add-title-button">
           <i className="fas fa-film text-white mr-1" />
           Add Movie or Show

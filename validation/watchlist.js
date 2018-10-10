@@ -1,7 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
-module.exports = function validateExperienceInput(data) {
+module.exports = function validateWatchlistInput(data) {
   let errors = {};
 
   data.videoName = !isEmpty(data.videoName) ? data.videoName : '';
