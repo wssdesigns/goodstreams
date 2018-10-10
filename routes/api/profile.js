@@ -5,7 +5,6 @@ const passport = require('passport');
 
 // Load Validation
 const validateProfileInput = require('../../validation/profile');
-const validateListInput = require('../../validation/list');
 const validateExperienceInput = require('../../validation/experience');
 
 // Load Profile Model
@@ -148,71 +147,6 @@ router.post(
         });
       }
     });
-  }
-);
-
-// @route   POST api/profile/list
-// @desc    Add list to profile
-// @access  Private
-router.post(
-  '/list',
-  passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    const { errors, isValid } = validateListInput(req.body);
-
-    // Check Validation
-    if (!isValid) {
-      // Return any errors with 400 status
-      return res.status(400).json(errors);
-    }
-
-    Profile.findOne({ user: req.user.id }).then(profile => {
-      const newExp = {
-        videoName: req.body.videoName,
-        category: req.body.category,
-        description: req.body.description,
-        videoOne: req.body.videoOne,
-        videoTwo: req.body.videoTwo,
-        videoThree: req.body.videoThree,
-        videoFour: req.body.videoFour,
-        videoFive: req.body.videoFive,
-        videoSix: req.body.videoSix,
-        videoSeven: req.body.videoSeven,
-        videoEight: req.body.videoEight,
-        videoNine: req.body.videoNine,
-        videoTen: req.body.videoTen,
-        lastChange: req.body.lastChange
-      };
-
-      // Add to exp array
-      profile.list.unshift(newExp);
-
-      profile.save().then(profile => res.json(profile));
-    });
-  }
-);
-
-// @route   DELETE api/profile/list/:exp_id
-// @desc    Delete list from profile
-// @access  Private
-router.delete(
-  '/list/:exp_id',
-  passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    Profile.findOne({ user: req.user.id })
-      .then(profile => {
-        // Get remove index
-        const removeIndex = profile.list
-          .map(item => item.id)
-          .indexOf(req.params.exp_id);
-
-        // Splice out of array
-        profile.list.splice(removeIndex, 1);
-
-        // Save
-        profile.save().then(profile => res.json(profile));
-      })
-      .catch(err => res.status(404).json(err));
   }
 );
 

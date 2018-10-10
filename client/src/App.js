@@ -22,9 +22,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
-import List from './components/list/List';
 import NotFound from './components/not-found/NotFound';
-import ListForm from './components/lists/ListForm';
 import About from './components/static-pages/About';
 import Contact from './components/static-pages/Contact';
 import Faq from './components/static-pages/Faq';
@@ -70,7 +68,6 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route exact path="/faq" component={Faq} />
               <Route exact path="/profile/:handle" component={Profile} />
-              <Route exact path="/create-list" component={ListForm} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
@@ -107,12 +104,6 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/post/:id" component={Post} />
-              </Switch>
-              <Switch>
-                <PrivateRoute exact path="/lists" component={ListForm} />
-              </Switch>
-              <Switch>
-                <PrivateRoute exact path="/list/:id" component={List} />
               </Switch>
               <Route exact path="/not-found" component={NotFound} />
             </div>

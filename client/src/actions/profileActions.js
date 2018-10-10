@@ -60,37 +60,6 @@ export const createProfile = (profileData, history) => dispatch => {
     );
 };
 
-// Add list
-export const createList = (listData, history) => dispatch => {
-  axios
-    .post('/api/profile/list', listData)
-    .then(res => history.push('/dashboard'))
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
-};
-
-// Delete list
-export const deleteList = id => dispatch => {
-  axios
-    .delete(`/api/profile/list/${id}`)
-    .then(res =>
-      dispatch({
-        type: GET_PROFILE,
-        payload: res.data
-      })
-    )
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
-};
-
 // Get all profiles
 export const getProfiles = () => dispatch => {
   dispatch(setProfileLoading());
