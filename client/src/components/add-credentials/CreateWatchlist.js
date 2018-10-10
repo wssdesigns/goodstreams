@@ -65,7 +65,7 @@ class CreateWatchlist extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Add Movie or Show</h1>
+              <h3 className="text-center">Add Movie or Show</h3>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="Name"
@@ -97,7 +97,7 @@ class CreateWatchlist extends Component {
                 />
               </form>
               <div style={{textAlign: 'center', marginTop: '20px'}}>
-                <Link style={{color: 'white'}} className="nav-link" to="/register">
+                <Link style={{color: 'grey', fontSize: '0.8rem'}} className="nav-link" to="/">
                   Cancel
                 </Link>
               </div>

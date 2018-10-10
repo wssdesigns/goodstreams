@@ -9,40 +9,21 @@ class ProfileItem extends Component {
 
     return (
       <div className="card card-body mb-3" style={{backgroundColor: 'rgb(37, 37, 38)', color: 'white'}}>
-        <div className="row">
-          <div className="col-3">
-            <img src={profile.user.avatar} alt="" className="rounded-circle" />
             <h3>{profile.user.name}</h3>
 
-            <p>
-              {isEmpty(profile.location) ? null : (
-                <span>{profile.location}</span>
-              )}
-            </p>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <hr/>
-            <p>
               {isEmpty(profile.favoriteMovie) ? null : (
-                <span>Favorite movie: {profile.favoriteMovie}</span>
+                <div>Favorite movie: {profile.favoriteMovie}</div>
               )}
-            </p>
-
-            <p>
               {isEmpty(profile.favoriteShow) ? null : (
                 <span>Favorite show: {profile.favoriteShow}</span>
               )}
-            </p>
-
-            <Link
-              to={`/profile/${profile.handle}`} 
-              className="btn btn-md btn-outline-light">
-              <i className="fa fa-list" aria-hidden="true"></i>  Browse Watchlist
-            </Link>
-            </div>
-          </div>
-        </div>
+              <div style={{marginTop: '20px'}}>
+                <Link
+                  to={`/profile/${profile.handle}`} 
+                  className="btn btn-md btn-outline-light">
+                  <i className="fa fa-list" aria-hidden="true"></i>  Browse Watchlist
+                </Link>
+              </div>
       </div>
     );
   }
