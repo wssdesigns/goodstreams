@@ -11,7 +11,7 @@ class Watchlist extends Component {
 
   render() {
     const watchlistContent = this.props.watchlist.map(exp => (
-        <div key={exp._id} style={{ backgroundColor: '#252526', padding: '20px', marginBottom: '10px' }}>
+        <div key={exp._id} id="watchlist-item" style={{ backgroundColor: '#252526', padding: '20px', marginBottom: '10px' }}>
         <div style={{textTransform: 'uppercase', fontSize: '1.3rem'}}>{exp.videoName}</div>
         <div className="date-video-added-caption">you added this <span style={{textTransform: 'lowercase'}}>{exp.category}</span> <Moment fromNow>{exp.addedTime}</Moment></div>
         <div>
