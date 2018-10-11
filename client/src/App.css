@@ -128,7 +128,13 @@ a.trailer-links {
 a.imdb-links {
   color: #fdcc59;
   font-weight: lighter;
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+.source-links {
+  margin-left: 20px;
+  color: grey;
+  font-weight: lighter;
 }
 
 .notes {
@@ -136,8 +142,14 @@ a.imdb-links {
   font-weight: lighter;
 }
 
-.remove-video-button {
-  margin-left: 30px;
+#remove-video-button {
+  margin-top: 20px;
+  padding: 0.1rem .4rem;
+  font-size: 0.5rem;
+}
+
+#remove-video-container {
+  text-align: right;
 }
 
 .date-video-added-caption {

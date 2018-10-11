@@ -26,7 +26,7 @@ class ProfileHeader extends Component {
                   <span>at {profile.company}</span>
                 )}
               </p>
-              {isEmpty(profile.location) ? null : <p>{profile.location}</p>}
+              {isEmpty(profile.location) ? null : <p style={{color: 'grey'}}>{profile.location}</p>}
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { createWatchlist } from '../../actions/profileActions';
 import SelectListGroup from '../common/SelectListGroup';
+import SelectSourceGroup from '../common/SelectSourceGroup';
 import { Link } from 'react-router-dom';
 
 class CreateWatchlist extends Component {
@@ -14,6 +15,7 @@ class CreateWatchlist extends Component {
     this.state = {
       videoName: '',
       category: '',
+      videoSource: '',
       notes: '',
       addedTime: '',
       errors: {}
@@ -36,6 +38,7 @@ class CreateWatchlist extends Component {
       videoName: this.state.videoName,
       notes: this.state.notes,
       category: this.state.category,
+      videoSource: this.state.videoSource,
       addedTime: new Date()
     };
 
@@ -55,6 +58,28 @@ class CreateWatchlist extends Component {
       { label: 'TV Show', value: 'TV Show' },
       { label: 'Documentary', value: 'Documentary' },
       { label: 'Short', value: 'Video' },
+    ];
+
+    const videoSource = [
+      { label: 'Source', value: 0 },
+      { label: 'Netflix', value: 'Netflix' },
+      { label: 'Amazon', value: 'Amazon' },
+      { label: 'Kanopy', value: 'Kanopy' },
+      { label: 'HBO Now', value: 'HBO Now' },
+      { label: 'Roku Channel', value: 'Roku Channel' },
+      { label: 'Showtime', value: 'Showtime' },
+      { label: 'Hulu', value: 'Hulu' },
+      { label: 'Google Play', value: 'Google Play' },
+      { label: 'Spectrum', value: 'Spectrum' },
+      { label: 'Starz', value: 'Starz' },
+      { label: 'Directv Now', value: 'Directv Now' },
+      { label: 'Xfinity', value: 'Xfinity' },
+      { label: 'YouTube', value: 'Youtube' },
+      { label: 'Sling', value: 'Sling' },
+      { label: 'Vudu', value: 'Vudu' },
+      { label: 'tubi', value: 'tubi' },
+      { label: 'PlayStation', value: 'PlayStation' },
+      { label: 'Sony Crackle', value: 'Sony Crackle' },
     ];
 
     return (
@@ -78,6 +103,14 @@ class CreateWatchlist extends Component {
                   onChange={this.onChange}
                   videoCategory={videoCategory}
                   error={errors.category}
+                />
+                <SelectSourceGroup
+                  placeholder="Source"
+                  name="videoSource"
+                  value={this.state.videoSource}
+                  onChange={this.onChange}
+                  videoSource={videoSource}
+                  error={errors.videoSource}
                 />
                 <TextAreaFieldGroup
                   placeholder="Notes"

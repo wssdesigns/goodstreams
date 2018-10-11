@@ -33,6 +33,9 @@ const ProfileSchema = new Schema({
       category: {
         type: String
       },
+      videoSource: {
+        type: String
+      },
       notes: {
         type: String
       },

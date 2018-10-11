@@ -185,6 +185,7 @@ router.post(
       const newExp = {
         videoName: req.body.videoName,
         category: req.body.category,
+        videoSource: req.body.videoSource,
         notes: req.body.notes,
         addedTime: req.body.addedTime
       };
