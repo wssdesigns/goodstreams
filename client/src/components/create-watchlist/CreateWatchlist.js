@@ -8,17 +8,6 @@ import { createWatchlist } from '../../actions/profileActions';
 import SelectListGroup from '../common/SelectListGroup';
 import { Link } from 'react-router-dom';
 
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
-
 
 class CreateWatchlist extends Component {
   constructor(props) {
@@ -44,14 +33,14 @@ class CreateWatchlist extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const videoData = {
+    const expData = {
       videoName: this.state.videoName,
       notes: this.state.notes,
       category: this.state.category,
       addedTime: new Date()
     };
 
-    this.props.createWatchlist(videoData, this.props.history);
+    this.props.createWatchlist(expData, this.props.history);
   }
 
   onChange(e) {
@@ -61,13 +50,15 @@ class CreateWatchlist extends Component {
   render() {
     const { errors } = this.state;
 
-    const videoCategory = [
-      { label: 'Category', value: 0 },
-      { label: 'Movie', value: 'Movie' },
-      { label: 'TV Show', value: 'TV Show' },
-      { label: 'Documentary', value: 'Documentary' },
-      { label: 'Short', value: 'Video' },
-    ];
+
+  // Select options for status
+  const options = [
+    { label: 'Category', value: 0 },
+    { label: 'Movie', value: 'Movie' },
+    { label: 'TV Show', value: 'TV Show' },
+    { label: 'Documentary', value: 'Documentary' },
+    { label: 'Short', value: 'Video' },
+  ];
 
     return (
       <div className="create-experience" style={{marginBottom: '400px'}}>
@@ -88,7 +79,7 @@ class CreateWatchlist extends Component {
                   name="category"
                   value={this.state.category}
                   onChange={this.onChange}
-                  videoCategory={videoCategory}
+                  options={options}
                   error={errors.category}
                 />
                 <TextAreaFieldGroup
@@ -107,7 +98,7 @@ class CreateWatchlist extends Component {
               </form>
               <div style={{textAlign: 'center', marginTop: '20px'}}>
                 <Link style={{color: 'grey', fontSize: '0.8rem'}} className="nav-link" to="/">
-                  cancel
+                  Cancel
                 </Link>
               </div>
             </div>
