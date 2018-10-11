@@ -12,7 +12,7 @@ export default () => {
           </div>
           <div className="col-sm">
               COMMUNITY
-              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled footer-list">
                 <li>
                   <Link to="/profiles" style={{ color: 'white' }}>
                     Explore
@@ -27,7 +27,7 @@ export default () => {
           </div>
           <div className="col-sm">
               COMPANY
-              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled footer-list">
                 <li>
                   <Link to="/about" style={{ color: 'white' }}>
                     About
@@ -47,7 +47,7 @@ export default () => {
           </div>
           <div className="col-sm">
               SOCIAL
-              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled">
+              <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled footer-list">
                 <li><i className="fab fa-instagram"></i><a href="https://www.instagram.com/goodstreamsio/" style={{ color: 'white' }}> Instagram</a></li>
                 <li><i className="fab fa-twitter"></i><a href="https://twitter.com/goodstreamsio" style={{ color: 'white' }}> twitter</a></li>
                 <li><i className="fab fa-facebook"></i><a href="https://facebook.com/goodstreamsio" style={{ color: 'white' }}> Facebook</a></li>
