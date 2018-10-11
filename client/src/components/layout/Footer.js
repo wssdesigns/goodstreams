@@ -8,7 +8,7 @@ export default () => {
         <div className="row" style={{marginTop: '30px'}}>
           <div className="col-sm">
             WHAT IS <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span>?
-            <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place to browse curated lists of the best movies and shows to stream. Find what movie or show to watch next, or create a list so you always have a list of high-quality titles to watch.</div>
+            <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place keep track of the movies and shows you plan to watch and see what your friends are watching.</div>
           </div>
           <div className="col-sm">
               COMMUNITY
@@ -55,7 +55,6 @@ export default () => {
           </div>
         </div>
         <div style={{margin: 'auto'}}>&copy; {new Date().getFullYear()} <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> Inc.</div>
-        <div id="footer-filler"></div>
       </div>
     </footer>
   );

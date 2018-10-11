@@ -51,7 +51,7 @@ hr {
 
 #footer {
   background-color: rgb(37, 37, 38);
-  height: 800px;
+  height: 650px;
   position: relative;
   text-align: center;
   padding-top: 100px;
@@ -143,7 +143,4 @@ a.imdb-links {
 .date-video-added-caption {
   font-size: 0.8rem;
   color: grey;
-}
-#footer-filler {
-  height: 200px;
 }

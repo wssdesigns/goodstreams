@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ProfileHeader from './ProfileHeader';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
-import Watchlist from '../dashboard/Watchlist';
+import ProfileWatchlist from './ProfileWatchlist';
 
 class Profile extends Component {
   componentDidMount() {
@@ -33,7 +33,7 @@ class Profile extends Component {
           </div>
           <ProfileHeader profile={profile} />
           <h2>Watchlist</h2>
-          <Watchlist watchlist={profile.watchlist} />
+          <ProfileWatchlist watchlist={profile.watchlist} />
         </div>
       );
     }
