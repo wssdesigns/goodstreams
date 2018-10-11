@@ -27,7 +27,7 @@ class Profiles extends Component {
     }
 
     return (
-      <div className="profiles" style={{marginBottom: '400px'}}>
+      <div className="profiles" style={{marginBottom: '100px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">

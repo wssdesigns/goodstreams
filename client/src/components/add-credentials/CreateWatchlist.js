@@ -8,18 +8,6 @@ import { createWatchlist } from '../../actions/profileActions';
 import SelectListGroup from '../common/SelectListGroup';
 import { Link } from 'react-router-dom';
 
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
-
-
 class CreateWatchlist extends Component {
   constructor(props) {
     super(props);
@@ -70,7 +58,7 @@ class CreateWatchlist extends Component {
     ];
 
     return (
-      <div className="create-experience" style={{marginBottom: '400px'}}>
+      <div className="create-experience" style={{marginBottom: '100px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

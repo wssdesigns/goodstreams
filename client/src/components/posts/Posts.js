@@ -22,7 +22,7 @@ class Posts extends Component {
     }
 
     return (
-      <div className="feed" style={{marginBottom: '400px'}}>
+      <div className="feed" style={{marginBottom: '100px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">

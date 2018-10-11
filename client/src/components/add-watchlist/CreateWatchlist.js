@@ -61,7 +61,7 @@ class CreateWatchlist extends Component {
   ];
 
     return (
-      <div className="create-experience" style={{marginBottom: '400px'}}>
+      <div className="create-experience" style={{marginBottom: '100px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

@@ -28,7 +28,7 @@ class Dashboard extends Component {
       // Check if logged in user has profile data
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
-          <div style={{marginBottom: '400px'}}>
+          <div style={{marginBottom: '100px'}}>
             <h3>My Watchlist</h3>
             <ProfileActions />
             <Watchlist watchlist={profile.watchlist} />
@@ -37,7 +37,7 @@ class Dashboard extends Component {
       } else {
         // User is logged in but has no profile
         dashboardContent = (
-          <div style={{marginBottom: '400px'}}>
+          <div style={{marginBottom: '100px'}}>
             <h3>Welcome {user.name}</h3>
             <p style={{color: 'grey'}}>You have not yet created a profile</p>
             <Link to="/create-profile" className="btn btn-lg btn-success">

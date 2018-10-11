@@ -27,7 +27,7 @@ class Profile extends Component {
       profileContent = <Spinner />;
     } else {
       profileContent = (
-        <div style={{marginBottom: '400px'}}>
+        <div style={{marginBottom: '100px'}}>
           <div className="row">
             <div className="col-md-6" />
           </div>
