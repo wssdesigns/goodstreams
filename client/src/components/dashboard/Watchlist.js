@@ -21,7 +21,7 @@ class Watchlist extends Component {
           <a className="imdb-links" href={`https://www.imdb.com/find?ref_=nv_sr_fn&q=${exp.videoName}&s=tt`}>
             <i className="fa fa-star" aria-hidden="true"/> IMDb</a>
             {exp.videoSource ? <span className="source-links"><i className="fa fa-map" aria-hidden="true"></i> {exp.videoSource}</span> : null}
-          <div className="notes">{exp.notes}</div>
+            {exp.notes ? <div className="notes" style={{marginTop: '10px'}}>"{exp.notes}"</div> : null}
           <div id="remove-video-container">
             <button
               onClick={this.onDeleteClick.bind(this, exp._id)}
