@@ -8,7 +8,7 @@ export default () => {
         <div className="row" style={{marginTop: '30px'}}>
           <div className="col-sm">
             WHAT IS <span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span>?
-            <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place keep track of the movies and shows you plan to watch and see what your friends are watching.</div>
+            <div style={{ color: 'white', marginTop: '10px', marginBottom: '20px'}}><span style={{fontWeight: 'bolder'}}>Good</span><span style={{fontWeight: 'lighter'}}>Streams</span> is the place to keep track of the movies and shows you plan to watch and see what your friends are watching.</div>
           </div>
           <div className="col-sm">
               COMMUNITY
