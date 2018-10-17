@@ -12,6 +12,12 @@ hr {
   color: white;
 }
 
+input.form-control.form-control-lg, 
+textarea.form-control.form-control-lg,
+select.form-control.form-control-lg {
+  border: none;
+}
+
 .landing {
   position: relative;
   background: url('./img/showcase.jpg') no-repeat;
@@ -144,8 +150,9 @@ a.imdb-links {
 
 #remove-video-button {
   margin-top: 20px;
-  padding: 0.1rem .4rem;
+  padding: 0.2rem .45rem;
   font-size: 0.5rem;
+  border-radius: 50%;
 }
 
 #remove-video-container {
@@ -155,4 +162,9 @@ a.imdb-links {
 .date-video-added-caption {
   font-size: 0.8rem;
   color: grey;
+}
+
+div.col-md-12 {
+  padding-right: 0;
+  padding-left: 0;
 }

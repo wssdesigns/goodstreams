@@ -25,7 +25,7 @@ class Watchlist extends Component {
           <div id="remove-video-container">
             <button
               onClick={this.onDeleteClick.bind(this, exp._id)}
-              className="btn btn-outline-danger btn-sm"
+              className="btn btn-outline-secondary btn-sm"
               id="remove-video-button"
             >
             x
