@@ -80,6 +80,8 @@ class CreateWatchlist extends Component {
       { label: 'tubi', value: 'tubi' },
       { label: 'PlayStation', value: 'PlayStation' },
       { label: 'Sony Crackle', value: 'Sony Crackle' },
+      { label: 'In Theaters', value: 'In Theaters' },
+      { label: 'Coming Soon', value: 'Coming Soon' },
     ];
 
     return (

@@ -159,9 +159,10 @@ a.imdb-links {
   text-align: right;
 }
 
-.date-video-added-caption {
+.date-video-added-caption, .notes {
   font-size: 0.8rem;
   color: grey;
+  margin-top: 10px;
 }
 
 div.col-md-12 {
