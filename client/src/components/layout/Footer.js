@@ -46,7 +46,7 @@ export default () => {
               </ul>
           </div>
           <div className="col-sm">
-              SOCIAL
+              GET SOCIAL
               <ul style={{ color: 'white', fontSize: '0.9rem', marginTop: '10px', marginBottom: '20px'}} className="list-unstyled footer-list">
                 <li><i className="fab fa-instagram"></i><a href="https://www.instagram.com/goodstreamsio/" style={{ color: 'white' }}> Instagram</a></li>
                 <li><i className="fab fa-twitter"></i><a href="https://twitter.com/goodstreamsio" style={{ color: 'white' }}> twitter</a></li>

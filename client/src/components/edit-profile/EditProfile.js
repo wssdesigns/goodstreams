@@ -58,7 +58,7 @@ class CreateProfile extends Component {
     const profileData = {
       handle: this.state.handle,
       location: this.state.location,
-      bio: this.state.bio,
+      bio: this.state.bio || null,
       favoriteMovie: this.state.favoriteMovie,
       favoriteShow: this.state.favoriteShow
     };
@@ -90,7 +90,7 @@ class CreateProfile extends Component {
                 />
                 <small style={{color:'grey'}}>Location</small>
                 <TextFieldGroup
-                  placeholder="Location"
+                  placeholder="Where do you live?"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}

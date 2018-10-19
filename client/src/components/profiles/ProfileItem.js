@@ -9,7 +9,7 @@ class ProfileItem extends Component {
 
     return (
       <div className="card card-body mb-3" style={{backgroundColor: 'rgb(37, 37, 38)', color: 'white'}}>
-            <h3>{profile.user.name}</h3>
+            <h3>@{profile.handle}</h3>
 
               {isEmpty(profile.favoriteMovie) ? null : (
                 <div>Favorite movie: {profile.favoriteMovie}</div>

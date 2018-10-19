@@ -10,7 +10,6 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: '',
       email: '',
       password: '',
       password2: '',
@@ -41,7 +40,6 @@ class Register extends Component {
     e.preventDefault();
 
     const newUser = {
-      name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
@@ -60,13 +58,6 @@ class Register extends Component {
             <div className="col-md-8 m-auto">
               <h3 className="text-center" style={{marginBottom: '20px'}}>Sign Up</h3>
               <form noValidate onSubmit={this.onSubmit}>
-                <TextFieldGroup
-                  placeholder="Name"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.onChange}
-                  error={errors.name}
-                />
                 <TextFieldGroup
                   placeholder="Email"
                   name="email"
