@@ -29,11 +29,11 @@ class Dashboard extends Component {
         if (Object.keys(profile.watchlist).length > 0) {
           dashboardContent = (
             <div style={{marginBottom: '100px'}}>
-              <h3 style={{marginBottom: '30px', padding: '10px'}}>My Watchlist
+              <h2 style={{marginBottom: '20px', padding: '10px'}}>My Watchlist
                 <span style={{textAlign: 'right', fontSize: '0.9rem', marginLeft: '50px', border: '1px solid grey', padding: '10px'}}><i className="fas fa-link"></i> 
                   <a style={{color: 'white'}} href={`https://www.goodstreams.io/profile/${profile.handle}`}> Share</a>
                 </span>
-              </h3>
+              </h2>
               <ProfileActions />
               <Watchlist watchlist={profile.watchlist} />
             </div>
@@ -41,7 +41,7 @@ class Dashboard extends Component {
         } else {
           dashboardContent = (
             <div style={{marginBottom: '100px'}}>
-              <h3>My Watchlist</h3>
+              <h2>My Watchlist</h2>
               <ProfileActions />
               <div style={{color: 'grey'}}>
                 <h4>Time to add some titles to your watchlist</h4>
