@@ -19,8 +19,7 @@ export default () => {
             <li>Friend members.</li>
             <li>Receive notifications when friends add new titles to their watchlists.</li>
           </ul>
-          <br/>
-          <div style={{fontStyle: 'italic'}}>What other services and hardware do you recomend for streaming?</div>
+          <p style={{fontStyle: 'italic'}}>What other services and hardware do you recomend for streaming?</p>
           <ul>
             Research what to watch:
             <li><a href="https://reelgood.com/">ReelGood</a></li>
