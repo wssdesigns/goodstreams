@@ -20,13 +20,13 @@ export default () => {
             <li>Receive notifications when friends add new titles to their watchlists.</li>
           </ul>
           <p style={{fontStyle: 'italic'}}>What other services and hardware do you recomend for streaming?</p>
+          Research what to watch
           <ul>
-            Research what to watch:
             <li><a href="https://reelgood.com/">ReelGood</a></li>
             <li><a href="https://instantwatcher.com/">InstantWatcher</a></li>
           </ul>
+          Hardware
           <ul>
-            Hardware
             <li><a href="https://www.roku.com/">Roku</a></li>
           </ul>
         </div>
