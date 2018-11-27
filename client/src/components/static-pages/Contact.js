@@ -11,7 +11,7 @@ export default () => {
             We'd love to hear from you
           </p>
             <div>
-              Contact us at goodstreamsio at dot com
+              Contact us at goodstreamsio at gmail dot com
             </div>
         </div>
       </div>
