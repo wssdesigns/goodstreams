@@ -147,14 +147,34 @@ a.imdb-links {
   font-weight: lighter;
 }
 
-.notes {
+.source-dna {
   color: grey;
   font-weight: lighter;
 }
 
+.category-links {
+  color: grey;
+  font-weight: lighter;
+}
+
+.notes-div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.notes-span {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 10px 10px 5px;
+  border-radius: 5px;
+}
+
+
+
 #remove-video-button {
-  margin-top: 20px;
-  padding: 0.2rem .45rem;
+  margin-top: 4px;
+  margin-right: -6px;
+  padding: 0.2rem .4rem;
   font-size: 0.5rem;
   border-radius: 50%;
 }
@@ -163,10 +183,10 @@ a.imdb-links {
   text-align: right;
 }
 
-.date-video-added-caption, .notes {
+.date-video-added-caption {
   font-size: 0.8rem;
   color: grey;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 div.col-md-12 {

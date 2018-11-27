@@ -18,11 +18,14 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h3 className="display-5">Discover high-quality movies and shows</h3>
-                <p className="lead">
+                <h1 className="display-5">Discover quality movies and shows</h1>
+                <div className="lead" style={{color: 'white'}}>
                   {' '}
-                  Spend less time researching what to watch
-                </p>
+                  Keep track of what you plan to watch
+                </div><div className="lead" style={{color: 'white'}}>
+                  {' '}
+                  See what your friends are watching
+                </div>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-success mr-2">
                   Sign Up
