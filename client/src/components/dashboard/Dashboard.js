@@ -31,11 +31,11 @@ class Dashboard extends Component {
             <div style={{marginBottom: '100px'}}>
                 <div style={{textAlign: 'center', fontSize: '0.9rem', paddingBottom: '10px', borderBottom: '.5px solid rgb(37, 37, 38)', marginBottom: '10px'}}>
                   <span style={{paddingRight: '20px', color: 'grey'}}>
-                    <i class="fa fa-users" aria-hidden="true"></i> Friends
+                    <i className="fa fa-users" aria-hidden="true"></i> Friends
                   </span>
 
                   <span style={{paddingRight: '20px', color: 'grey'}}>
-                    <i class="fa fa-archive" aria-hidden="true" ></i> Watched
+                    <i className="fa fa-archive" aria-hidden="true" ></i> Watched
                   </span>
                   <span>
                     <i className="fas fa-link"></i> 
