@@ -26,6 +26,7 @@ import NotFound from './components/not-found/NotFound';
 import About from './components/static-pages/About';
 import Contact from './components/static-pages/Contact';
 import Faq from './components/static-pages/Faq';
+import AddToHomeScreen from './components/static-pages/AddToHomeScreen';
 import CreateWatchlist from './components/add-credentials/CreateWatchlist';
 import EditWatchlist from './components/edit-watchlist/EditWatchlist';
 
@@ -67,6 +68,7 @@ class App extends Component {
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/about" component={About} />
               <Route exact path="/faq" component={Faq} />
+              <Route exact path="/addtohomescreen" component={AddToHomeScreen} />
               <Route exact path="/profile/:handle" component={Profile} />
               <Route exact path="/user/:id" component={Profile} />
               <Switch>
