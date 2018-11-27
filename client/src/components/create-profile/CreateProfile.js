@@ -56,7 +56,7 @@ class CreateProfile extends Component {
             <div className="col-md-8 m-auto">
               <h3 className="text-center">Create Your Profile</h3>
               <form onSubmit={this.onSubmit}>
-                <small style={{color:'grey'}}>Profile Handle</small>
+                <div style={{color:'grey'}}>Profile Handle</div>
                 <TextFieldGroup
                   placeholder="Profile Handle*"
                   name="handle"
@@ -64,7 +64,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                 />
-                <small style={{color:'grey'}}>Location</small>
+                <div style={{color:'grey'}}>Location</div>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -72,7 +72,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.location}
                 />
-                <small style={{color:'grey'}}>Bio</small>
+                <div style={{color:'grey'}}>Bio</div>
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
                   name="bio"
@@ -80,7 +80,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.bio}
                 />
-                <small style={{color:'grey'}}>Favorite Movie</small>
+                <div style={{color:'grey'}}>Favorite Movie</div>
                 <TextFieldGroup
                   placeholder="Favorite Movie"
                   name="favoriteMovie"
@@ -88,7 +88,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.favoriteMovie}
                 />
-                <small style={{color:'grey'}}>Favorite Show</small>
+                <div style={{color:'grey'}}>Favorite Show</div>
                 <TextFieldGroup
                   placeholder="Favorite Show"
                   name="favoriteShow"

@@ -80,7 +80,7 @@ class CreateProfile extends Component {
             <div className="col-md-8 m-auto">
             <h3 className="text-left">Edit Profile</h3>
               <form onSubmit={this.onSubmit}>
-                <small style={{color:'grey'}}>Profile Handle</small>
+                <div style={{color:'grey'}}>Profile Handle*</div>
                 <TextFieldGroup
                   placeholder="A unique handle for your profile URL"
                   name="handle"
@@ -88,7 +88,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                 />
-                <small style={{color:'grey'}}>Location</small>
+                <div style={{color:'grey'}}>Location</div>
                 <TextFieldGroup
                   placeholder="Where do you live?"
                   name="location"
@@ -96,7 +96,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.location}
                 />
-                <small style={{color:'grey'}}>Bio</small>
+                <div style={{color:'grey'}}>Bio</div>
                 <TextAreaFieldGroup
                   placeholder="What kind of movies and shows do you like?"
                   name="bio"
@@ -104,7 +104,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.bio}
                 />
-                <small style={{color:'grey'}}>Favorite Movie</small>
+                <div style={{color:'grey'}}>Favorite Movie</div>
                 <TextFieldGroup
                   placeholder="e.g. Pulp Fiction"
                   name="favoriteMovie"
@@ -112,7 +112,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.favoriteMovie}
                 />
-                <small style={{color:'grey'}}>Favorite TV show</small>
+                <div style={{color:'grey'}}>Favorite TV show</div>
                 <TextFieldGroup
                   placeholder="e.g. The Wire"
                   name="favoriteShow"

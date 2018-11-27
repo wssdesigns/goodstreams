@@ -72,6 +72,10 @@ select.form-control.form-control-lg {
   line-height: 2;
 }
 
+.nav-link {
+  color: white !important;
+}
+
 #main-navbar {
   background-color: red;
 }

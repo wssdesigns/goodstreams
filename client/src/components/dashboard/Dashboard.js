@@ -29,10 +29,20 @@ class Dashboard extends Component {
         if (Object.keys(profile.watchlist).length > 0) {
           dashboardContent = (
             <div style={{marginBottom: '100px'}}>
+                <div style={{textAlign: 'center', fontSize: '0.9rem', paddingBottom: '10px', borderBottom: '.5px solid rgb(37, 37, 38)', marginBottom: '10px'}}>
+                  <span style={{paddingRight: '20px', color: 'grey'}}>
+                    <i class="fa fa-users" aria-hidden="true"></i> Friends
+                  </span>
+
+                  <span style={{paddingRight: '20px', color: 'grey'}}>
+                    <i class="fa fa-archive" aria-hidden="true" ></i> Watched
+                  </span>
+                  <span>
+                    <i className="fas fa-link"></i> 
+                    <a style={{color: 'white'}} href={`https://www.goodstreams.io/profile/${profile.handle}`}> Share</a>
+                  </span>
+                </div>
               <h2 style={{marginBottom: '20px', padding: '10px'}}>My Watchlist
-                <span style={{textAlign: 'right', fontSize: '0.9rem', marginLeft: '50px', border: '1px solid grey', padding: '10px'}}><i className="fas fa-link"></i> 
-                  <a style={{color: 'white'}} href={`https://www.goodstreams.io/profile/${profile.handle}`}> Share</a>
-                </span>
               </h2>
               <ProfileActions />
               <Watchlist watchlist={profile.watchlist} />
