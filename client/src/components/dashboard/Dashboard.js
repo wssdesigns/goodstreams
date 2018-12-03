@@ -39,7 +39,7 @@ class Dashboard extends Component {
                     <a style={{color: 'white'}} href={`https://www.goodstreams.io/profile/${profile.handle}`}> Share watchlist</a>
                   </span>
                 </div>
-              <h2 style={{marginBottom: '20px', padding: '10px'}}>My Watchlist
+              <h2 style={{padding: '10px'}}>My Watchlist
               </h2>
               <ProfileActions />
               <Watchlist watchlist={profile.watchlist} />
