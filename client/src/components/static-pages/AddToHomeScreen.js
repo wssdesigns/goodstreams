@@ -7,7 +7,6 @@ export default () => {
      <div className="container" style={{marginBottom: '100px'}}>
       <div className="row">
         <div className="col-md-12">
-          <h3 className="text-left">Add To Home Screen</h3>
           <p className="text-left">
             Follow these steps to create a GoodStreams icon on your iPhone
           </p>

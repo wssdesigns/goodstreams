@@ -30,7 +30,7 @@ select.form-control.form-control-lg {
 }
 
 .landing-inner {
-  padding-top: 80px;
+  padding-top: 45px;
 }
 
 .dark-overlay {
@@ -163,9 +163,8 @@ a.imdb-links {
 }
 
 .notes-span {
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px 10px 10px 5px;
+  padding: 2px;
   border-radius: 5px;
 }
 

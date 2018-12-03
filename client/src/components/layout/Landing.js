@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-
+import LandingCarousel from '../carousels/LandingCarousel.js'
 
 class Landing extends Component {
   componentDidMount() {
@@ -33,6 +33,9 @@ class Landing extends Component {
                 <Link to="/login" className="btn btn-lg btn-light">
                   Login
                 </Link>
+              </div>
+              <div style={{marginTop: '40px'}}>
+                <LandingCarousel/>
               </div>
             </div>
           </div>
