@@ -34,8 +34,8 @@ class Landing extends Component {
                   Login
                 </Link>
               </div>
-              <div style={{marginTop: '40px'}}>
-                <LandingCarousel/>
+              <div style={{marginTop: '20px'}}>
+                <LandingCarousel />
               </div>
             </div>
           </div>

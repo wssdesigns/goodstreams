@@ -7,15 +7,18 @@ import screenShotThree from '../../img/goodstreams-screenshot3.png';
 const items = [
   {
     src: screenShotOne,
-    altText: 'Screen shot 1 - add movie to watchlist'
+    altText: 'Screen shot 1 - add movie to watchlist',
+    caption: ''
   },
   {
     src: screenShotTwo,
-    altText: 'Screen shot 2 - create a watchlist'
+    altText: 'Screen shot 2 - create a watchlist',
+    caption: ''
   },
   {
     src: screenShotThree,
-    altText: 'Screen shot 3 - browse friend\'s watchlists'
+    altText: 'Screen shot 3 - browse friend\'s watchlists',
+    caption: ''
   }
 ];
 
