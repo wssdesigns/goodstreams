@@ -29,16 +29,6 @@ class Dashboard extends Component {
         if (Object.keys(profile.watchlist).length > 0) {
           dashboardContent = (
             <div style={{marginBottom: '100px'}}>
-                <div style={{textAlign: 'center', fontSize: '0.9rem', paddingBottom: '10px', borderBottom: '.5px solid rgb(37, 37, 38)', marginBottom: '10px'}}>
-                <span style={{paddingRight: '10px', color: 'white'}}>
-                    <i className="fas fa-bookmark"></i>
-                    <a style={{color: 'white'}} href={`https://www.goodstreams.io/addtohomescreen`}> Add to home screen</a>
-                  </span>
-                  <span style={{paddingRight: '10px'}}>
-                    <i className="fas fa-link"></i> 
-                    <a style={{color: 'white'}} href={`https://www.goodstreams.io/profile/${profile.handle}`}> Share watchlist</a>
-                  </span>
-                </div>
               <h2 style={{padding: '10px'}}>My Watchlist
               </h2>
               <ProfileActions />

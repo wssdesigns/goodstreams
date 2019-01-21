@@ -34,7 +34,7 @@ export default () => {
         </div>
         <h5 style={{fontStyle: 'italic'}}>How do I add an icon to the home screen on my phone?</h5>
         <div>
-          <img src={addToHomeScreen} style={{height: 'auto', width: '50%', marginBottom: '50px'}} alt="add-to-homescreen logo"></img>
+          <img src={addToHomeScreen} style={{height: 'auto', width: '20%', marginBottom: '50px'}} alt="add-to-homescreen logo"></img>
         </div>
       </div>
     </div>
