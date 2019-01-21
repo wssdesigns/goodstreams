@@ -37,7 +37,7 @@ class Watchlist extends Component {
               className="btn btn-outline-secondary btn-sm"
               id="remove-video-button"
             >
-            x
+            <span role="img" aria-label="">❌</span>
             </button>
           </span>
         </div>

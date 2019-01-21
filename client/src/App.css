@@ -165,11 +165,13 @@ a.imdb-links {
 }
 
 #remove-video-button {
-  margin-top: 4px;
-  margin-right: -6px;
-  padding: 0.2rem .4rem;
-  font-size: 0.5rem;
-  border-radius: 50%;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 #remove-video-container {

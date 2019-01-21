@@ -24,6 +24,7 @@ class ProfileItem extends Component {
                   <i className="fa fa-list" aria-hidden="true"></i>  Watchlist
                 </Link>
               </div>
+              <div style={{marginTop: '20px', color: 'grey', fontSize: '.8rem'}}>Updated PLACEHOLDER</div>
       </div>
     );
   }
