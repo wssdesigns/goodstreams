@@ -10,13 +10,6 @@ class ProfileHeader extends Component {
         <div className="col-md-12">
           <div className="card card-body text-white mb-3" style={{backgroundColor: 'rgb(37, 37, 38)'}}>
             <div className="row">
-              <div className="col-4 col-md-2 m-auto">
-                <img
-                  className="rounded-circle"
-                  src={profile.user.avatar}
-                  alt=""
-                />
-              </div>
             </div>
             <div className="text-center">
               <h2 className="display-7 text-center">{profile.user.name}</h2>
